@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="620" viewBox="0 0 1040 620" role="img" aria-labelledby="title desc">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<title id="title">Figure 2. Argon2id Parameters and Median Derivation Latency</title>
+<desc id="desc">Configurations encode time cost and memory; 30 measured derivations each. Raw source research-run-2026-10-05T17-49-16-071Z.json.</desc>
+<text x="100" y="38" class="heading">Figure 2. Argon2id Parameters and Median Derivation Latency</text>
+<text x="100" y="66" class="subtitle">Configurations encode time cost and memory; 30 measured derivations each.</text>
+<g font-family="Georgia, serif" fill="#252a2d">
+<line x1="100" y1="470" x2="970" y2="470" stroke="#d9dddf" stroke-width="1"/>
+<text x="86" y="475" text-anchor="end" font-size="13">0.00</text>
+<line x1="100" y1="394.4" x2="970" y2="394.4" stroke="#d9dddf" stroke-width="1"/>
+<text x="86" y="399.4" text-anchor="end" font-size="13">139</text>
+<line x1="100" y1="318.79999999999995" x2="970" y2="318.79999999999995" stroke="#d9dddf" stroke-width="1"/>
+<text x="86" y="323.79999999999995" text-anchor="end" font-size="13">278</text>
+<line x1="100" y1="243.19999999999996" x2="970" y2="243.19999999999996" stroke="#d9dddf" stroke-width="1"/>
+<text x="86" y="248.19999999999996" text-anchor="end" font-size="13">417</text>
+<line x1="100" y1="167.59999999999997" x2="970" y2="167.59999999999997" stroke="#d9dddf" stroke-width="1"/>
+<text x="86" y="172.59999999999997" text-anchor="end" font-size="13">555</text>
+<line x1="100" y1="92" x2="970" y2="92" stroke="#d9dddf" stroke-width="1"/>
+<text x="86" y="97" text-anchor="end" font-size="13">694</text>
+<line x1="100" y1="92" x2="100" y2="470" stroke="#596166"/>
+<line x1="100" y1="470" x2="970" y2="470" stroke="#596166"/>
+<line x1="100" y1="470" x2="100" y2="475" stroke="#596166"/>
+<text x="100" y="495" text-anchor="middle" font-size="12">2t/64MiB</text>
+<line x1="535" y1="470" x2="535" y2="475" stroke="#596166"/>
+<text x="535" y="495" text-anchor="middle" font-size="12">3t/64MiB</text>
+<line x1="970" y1="470" x2="970" y2="475" stroke="#596166"/>
+<text x="970" y="495" text-anchor="middle" font-size="12">3t/256MiB</text>
+<text x="535" y="532" text-anchor="middle" font-size="15">Argon2id configuration (time cost / memory)</text>
+<text transform="translate(30 281) rotate(-90)" text-anchor="middle" font-size="15">Latency (ms)</text>
+<path d="M 100 406.030294141124 L 535 378.1328374689729 L 970 97.18708278282071 " fill="none" stroke="#c17a18" stroke-width="3"/>
+<line x1="100" y1="404.93108222990094" x2="100" y2="407.7452734059287" stroke="#c17a18" stroke-width="1.5"/>
+<line x1="95" y1="404.93108222990094" x2="105" y2="404.93108222990094" stroke="#c17a18"/>
+<line x1="95" y1="407.7452734059287" x2="105" y2="407.7452734059287" stroke="#c17a18"/>
+<circle cx="100" cy="406.030294141124" r="5" fill="#c17a18"/>
+<line x1="535" y1="376.86270778499266" x2="535" y2="381.2284051058442" stroke="#c17a18" stroke-width="1.5"/>
+<line x1="530" y1="376.86270778499266" x2="540" y2="376.86270778499266" stroke="#c17a18"/>
+<line x1="530" y1="381.2284051058442" x2="540" y2="381.2284051058442" stroke="#c17a18"/>
+<circle cx="535" cy="378.1328374689729" r="5" fill="#c17a18"/>
+<line x1="970" y1="92" x2="970" y2="102.90096458192966" stroke="#c17a18" stroke-width="1.5"/>
+<line x1="965" y1="92" x2="975" y2="92" stroke="#c17a18"/>
+<line x1="965" y1="102.90096458192966" x2="975" y2="102.90096458192966" stroke="#c17a18"/>
+<circle cx="970" cy="97.18708278282071" r="5" fill="#c17a18"/>
+<line x1="100" y1="552" x2="124" y2="552" stroke="#c17a18" stroke-width="3"/>
+<text x="131" y="557" font-size="13">Argon2id median</text>
+<text x="100" y="590" font-size="11" fill="#586168">Error bars: 95% percentile-bootstrap CI for median. Source SHA-256: 2689751c3db02db972960a53cb4ec58ecc9e69dd989650d981f1d5b885725d63</text>
+</g><style>.heading{font:600 24px Georgia,serif;fill:#202629}.subtitle{font:14px Georgia,serif;fill:#596166}</style></svg>

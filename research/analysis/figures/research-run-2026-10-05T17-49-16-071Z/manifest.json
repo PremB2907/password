@@ -1,0 +1,13 @@
+{
+  "sourceFile": "research-run-2026-10-05T17-49-16-071Z.json",
+  "sourceSha256": "2689751c3db02db972960a53cb4ec58ecc9e69dd989650d981f1d5b885725d63",
+  "outputFigures": [
+    "figure-01-pbkdf2-iterations.svg",
+    "figure-02-argon2id-parameters.svg",
+    "figure-03-normalized-kdf-latency.svg",
+    "figure-04-shamir-reconstruction.svg",
+    "figure-05-vault-encryption.svg",
+    "figure-06-vault-decryption.svg",
+    "figure-07-tamper-detection.svg"
+  ]
+}

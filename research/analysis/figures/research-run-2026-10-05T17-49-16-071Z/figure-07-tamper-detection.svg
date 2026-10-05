@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="620" viewBox="0 0 1040 620" role="img" aria-labelledby="title desc">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<title id="title">Figure 7. AES-GCM Tamper-Detection Success Rate</title>
+<desc id="desc">Observed decryption rejection proportion for each mutation class. Raw source research-run-2026-10-05T17-49-16-071Z.json.</desc>
+<text x="100" y="38" class="heading">Figure 7. AES-GCM Tamper-Detection Success Rate</text>
+<text x="100" y="66" class="subtitle">Observed decryption rejection proportion for each mutation class.</text>
+<g font-family="Georgia, serif" fill="#252a2d">
+<line x1="100" y1="470" x2="970" y2="470" stroke="#d9dddf"/>
+<text x="86" y="475" text-anchor="end" font-size="13">0%</text>
+<line x1="100" y1="394.4" x2="970" y2="394.4" stroke="#d9dddf"/>
+<text x="86" y="399.4" text-anchor="end" font-size="13">20%</text>
+<line x1="100" y1="318.79999999999995" x2="970" y2="318.79999999999995" stroke="#d9dddf"/>
+<text x="86" y="323.79999999999995" text-anchor="end" font-size="13">40%</text>
+<line x1="100" y1="243.19999999999996" x2="970" y2="243.19999999999996" stroke="#d9dddf"/>
+<text x="86" y="248.19999999999996" text-anchor="end" font-size="13">60%</text>
+<line x1="100" y1="167.59999999999997" x2="970" y2="167.59999999999997" stroke="#d9dddf"/>
+<text x="86" y="172.59999999999997" text-anchor="end" font-size="13">80%</text>
+<line x1="100" y1="92" x2="970" y2="92" stroke="#d9dddf"/>
+<text x="86" y="97" text-anchor="end" font-size="13">100%</text>
+<line x1="100" y1="92" x2="100" y2="470" stroke="#596166"/>
+<line x1="100" y1="470" x2="970" y2="470" stroke="#596166"/>
+<rect x="205" y="92" width="80" height="378" fill="#187b73"/>
+<line x1="245" y1="92" x2="245" y2="134.90806321982882" stroke="#202629" stroke-width="2"/>
+<line x1="238" y1="92" x2="252" y2="92" stroke="#202629"/>
+<line x1="238" y1="134.90806321982882" x2="252" y2="134.90806321982882" stroke="#202629"/>
+<text x="245" y="495" text-anchor="middle" font-size="13">ciphertext</text>
+<rect x="495" y="92" width="80" height="378" fill="#c17a18"/>
+<line x1="535" y1="92" x2="535" y2="134.90806321982882" stroke="#202629" stroke-width="2"/>
+<line x1="528" y1="92" x2="542" y2="92" stroke="#202629"/>
+<line x1="528" y1="134.90806321982882" x2="542" y2="134.90806321982882" stroke="#202629"/>
+<text x="535" y="495" text-anchor="middle" font-size="13">nonce</text>
+<rect x="785" y="92" width="80" height="378" fill="#486b9a"/>
+<line x1="825" y1="92" x2="825" y2="134.90806321982882" stroke="#202629" stroke-width="2"/>
+<line x1="818" y1="92" x2="832" y2="92" stroke="#202629"/>
+<line x1="818" y1="134.90806321982882" x2="832" y2="134.90806321982882" stroke="#202629"/>
+<text x="825" y="495" text-anchor="middle" font-size="13">wrapping-key</text>
+<text transform="translate(30 281) rotate(-90)" text-anchor="middle" font-size="15">Observed detection rate</text>
+<text x="100" y="552" font-size="12">Wilson score 95% intervals; 30 trials per mutation. Source SHA-256: 2689751c3db02db972960a53cb4ec58ecc9e69dd989650d981f1d5b885725d63</text>
+</g><style>.heading{font:600 24px Georgia,serif;fill:#202629}.subtitle{font:14px Georgia,serif;fill:#596166}</style></svg>

@@ -5,11 +5,12 @@ import {
   aesGcmEncrypt,
   b64ToBytes,
   bytesToB64,
+  bytesToUtf8,
   deriveMasterKek,
   randomBytes,
+  type KdfParams,
+  type Pbkdf2Params,
   utf8ToBytes,
-  bytesToUtf8,
-  type Argon2idParams,
 } from './crypto'
 
 export type UnlockedVault = {
@@ -17,7 +18,11 @@ export type UnlockedVault = {
   data: VaultData
 }
 
-const DEFAULT_KDF: Omit<Argon2idParams, 'salt'> = { iterations: 310_000, dkLen: 32 }
+const DEFAULT_KDF: Omit<Pbkdf2Params, 'salt'> = {
+  name: 'pbkdf2-sha256',
+  iterations: 310_000,
+  dkLen: 32,
+}
 
 function now(): number {
   return Date.now()
@@ -27,16 +32,28 @@ function newId(): string {
   return crypto.randomUUID()
 }
 
-async function encryptVaultData(vaultKey: Uint8Array, data: VaultData) {
+export type EncryptedVaultPayload = VaultBlobV1['payload']
+
+export async function encryptVaultPayload(
+  vaultKey: Uint8Array,
+  data: VaultData,
+): Promise<EncryptedVaultPayload> {
   const bytes = utf8ToBytes(JSON.stringify(data))
-  return aesGcmEncrypt(vaultKey, bytes)
+  const encrypted = await aesGcmEncrypt(vaultKey, bytes)
+  return {
+    nonceB64: bytesToB64(encrypted.nonce),
+    ctB64: bytesToB64(encrypted.ciphertext),
+  }
 }
 
-async function decryptVaultData(vaultKey: Uint8Array, blob: VaultBlobV1): Promise<VaultData> {
+export async function decryptVaultPayload(
+  vaultKey: Uint8Array,
+  payload: EncryptedVaultPayload,
+): Promise<VaultData> {
   const pt = await aesGcmDecrypt(
     vaultKey,
-    b64ToBytes(blob.payload.nonceB64),
-    b64ToBytes(blob.payload.ctB64),
+    b64ToBytes(payload.nonceB64),
+    b64ToBytes(payload.ctB64),
   )
   const json = JSON.parse(bytesToUtf8(pt)) as unknown
   const parsed = vaultDataSchema.safeParse(json)
@@ -44,37 +61,58 @@ async function decryptVaultData(vaultKey: Uint8Array, blob: VaultBlobV1): Promis
   return parsed.data
 }
 
+function toKdfParams(salt: Uint8Array, kdf: VaultBlobV1['kdf']): KdfParams {
+  if (kdf.name === 'argon2id') {
+    return {
+      name: 'argon2id',
+      salt,
+      iterations: kdf.iterations,
+      memorySize: kdf.memorySize ?? 65536,
+      parallelism: kdf.parallelism ?? 1,
+      dkLen: kdf.dkLen,
+    }
+  }
+
+  return {
+    name: 'pbkdf2-sha256',
+    salt,
+    iterations: kdf.iterations,
+    dkLen: kdf.dkLen,
+  }
+}
+
 export async function createNewVault(input: {
   masterPassword: string
   shares: number
   threshold: number
+  kdf?: KdfParams
 }): Promise<{ blob: VaultBlobV1; recoveryShares: string[]; unlocked: UnlockedVault }> {
   const createdAt = now()
 
   const salt = randomBytes(16)
-  const kdfParams: Argon2idParams = { salt, ...DEFAULT_KDF }
-  const masterKek = await deriveMasterKek(input.masterPassword, kdfParams)
+  const selectedKdf: KdfParams = input.kdf ?? { ...DEFAULT_KDF, name: 'pbkdf2-sha256', salt }
+  const masterKek = await deriveMasterKek(input.masterPassword, selectedKdf)
 
-  // Random vault key used to encrypt the entire vault payload.
   const vaultKey = randomBytes(32)
-
-  // Random recovery key (will be split to shares). Used only to unwrap vaultKey.
   const recoveryKey = randomBytes(32)
 
   const wrapMaster = await aesGcmEncrypt(masterKek, vaultKey)
   const wrapRecovery = await aesGcmEncrypt(recoveryKey, vaultKey)
 
   const initialData: VaultData = { entries: [] }
-  const payload = await encryptVaultData(vaultKey, initialData)
+  const payload = await encryptVaultPayload(vaultKey, initialData)
 
   const blob: VaultBlobV1 = {
     version: 1,
     createdAt,
     kdf: {
-      name: 'pbkdf2-sha256',
+      name: selectedKdf.name,
       saltB64: bytesToB64(salt),
-      iterations: kdfParams.iterations,
-      dkLen: kdfParams.dkLen,
+      iterations: selectedKdf.iterations,
+      dkLen: selectedKdf.dkLen,
+      ...(selectedKdf.name === 'argon2id'
+        ? { memorySize: selectedKdf.memorySize, parallelism: selectedKdf.parallelism }
+        : {}),
     },
     wrap: {
       master: { nonceB64: bytesToB64(wrapMaster.nonce), ctB64: bytesToB64(wrapMaster.ciphertext) },
@@ -83,7 +121,7 @@ export async function createNewVault(input: {
         ctB64: bytesToB64(wrapRecovery.ciphertext),
       },
     },
-    payload: { nonceB64: bytesToB64(payload.nonce), ctB64: bytesToB64(payload.ciphertext) },
+    payload,
   }
 
   const shares = split(Buffer.from(recoveryKey), {
@@ -98,11 +136,8 @@ export async function decryptVaultWithMasterPassword(
   blob: VaultBlobV1,
   masterPassword: string,
 ): Promise<UnlockedVault> {
-  const masterKek = await deriveMasterKek(masterPassword, {
-    salt: b64ToBytes(blob.kdf.saltB64),
-    iterations: blob.kdf.iterations,
-    dkLen: blob.kdf.dkLen,
-  })
+  const salt = b64ToBytes(blob.kdf.saltB64)
+  const masterKek = await deriveMasterKek(masterPassword, toKdfParams(salt, blob.kdf))
 
   const vaultKey = await aesGcmDecrypt(
     masterKek,
@@ -110,13 +145,13 @@ export async function decryptVaultWithMasterPassword(
     b64ToBytes(blob.wrap.master.ctB64),
   )
 
-  const data = await decryptVaultData(vaultKey, blob)
+  const data = await decryptVaultPayload(vaultKey, blob.payload)
   return { vaultKey, data }
 }
 
 export async function recoverVaultWithSharesAndRotateMasterPassword(
   blob: VaultBlobV1,
-  input: { shares: string[]; newMasterPassword: string },
+  input: { shares: string[]; newMasterPassword: string; kdf?: KdfParams },
 ): Promise<{ newBlob: VaultBlobV1; unlocked: UnlockedVault }> {
   const recovered = combine(input.shares.map((s) => Buffer.from(s.trim(), 'hex')))
   const recoveryKey = Uint8Array.from(recovered)
@@ -127,21 +162,23 @@ export async function recoverVaultWithSharesAndRotateMasterPassword(
     b64ToBytes(blob.wrap.recovery.ctB64),
   )
 
-  const data = await decryptVaultData(vaultKey, blob)
+  const data = await decryptVaultPayload(vaultKey, blob.payload)
 
-  // Rotate master password: generate new salt + rewrap vaultKey under new master KEK.
   const newSalt = randomBytes(16)
-  const kdfParams: Argon2idParams = { salt: newSalt, ...DEFAULT_KDF }
-  const newMasterKek = await deriveMasterKek(input.newMasterPassword, kdfParams)
+  const selectedKdf: KdfParams = input.kdf ?? { ...DEFAULT_KDF, name: 'pbkdf2-sha256', salt: newSalt }
+  const newMasterKek = await deriveMasterKek(input.newMasterPassword, selectedKdf)
   const wrapMaster = await aesGcmEncrypt(newMasterKek, vaultKey)
 
   const newBlob: VaultBlobV1 = {
     ...blob,
     kdf: {
-      name: 'pbkdf2-sha256',
+      name: selectedKdf.name,
       saltB64: bytesToB64(newSalt),
-      iterations: kdfParams.iterations,
-      dkLen: kdfParams.dkLen,
+      iterations: selectedKdf.iterations,
+      dkLen: selectedKdf.dkLen,
+      ...(selectedKdf.name === 'argon2id'
+        ? { memorySize: selectedKdf.memorySize, parallelism: selectedKdf.parallelism }
+        : {}),
     },
     wrap: {
       master: { nonceB64: bytesToB64(wrapMaster.nonce), ctB64: bytesToB64(wrapMaster.ciphertext) },
@@ -175,10 +212,10 @@ export async function upsertEntryAndSave(
     })
   }
 
-  const payload = await encryptVaultData(unlocked.vaultKey, next)
+  const payload = await encryptVaultPayload(unlocked.vaultKey, next)
   const newBlob: VaultBlobV1 = {
     ...blob,
-    payload: { nonceB64: bytesToB64(payload.nonce), ctB64: bytesToB64(payload.ciphertext) },
+    payload,
   }
 
   return { newUnlocked: { ...unlocked, data: next }, newBlob }

@@ -1,0 +1,7 @@
+experiment,timestamp,browser,platform,result
+"kdf","2026-10-05T17:38:00.554Z","Node.js/22","Linux x86_64","KDF benchmark completed; PBKDF2 baseline preserved and Argon2id benchmarked separately."
+"recovery","2026-10-05T17:38:01.093Z","Node.js/22","Linux x86_64","Recovery benchmark completed for threshold configurations."
+"tamper","2026-10-05T17:38:01.094Z","Node.js/22","Linux x86_64","AES-GCM tamper detection validated for ciphertext and nonce mutations."
+"offline","2026-10-05T17:38:01.539Z","Node.js/22","Linux x86_64","Offline attack-resistance benchmark executed on synthetic data only."
+"vault","2026-10-05T17:38:04.498Z","Node.js/22","Linux x86_64","Synthetic vault performance benchmark completed."
+"rotation","2026-10-05T17:38:04.704Z","Node.js/22","Linux x86_64","Recovery and rotation cycle verified with a new master password and old password rejection."

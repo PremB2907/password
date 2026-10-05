@@ -22,10 +22,12 @@ export const vaultBlobV1Schema = z.object({
   createdAt: z.number(),
   // KDF params for master password -> master KEK (key-encryption-key)
   kdf: z.object({
-    name: z.literal('pbkdf2-sha256'),
+    name: z.union([z.literal('pbkdf2-sha256'), z.literal('argon2id')]),
     saltB64: z.string(),
     iterations: z.number().int().positive(),
     dkLen: z.number().int().positive(),
+    memorySize: z.number().int().positive().optional(),
+    parallelism: z.number().int().positive().optional(),
   }),
   // Encrypted vault KEK wrapping and encrypted vault payload.
   wrap: z.object({

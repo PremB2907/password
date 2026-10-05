@@ -1,0 +1,468 @@
+{
+  "kdf": {
+    "experiment": "kdf-benchmark",
+    "timestamp": "2026-10-05T17:38:00.554Z",
+    "browser": {
+      "userAgent": "Node.js/22",
+      "platform": "Linux x86_64",
+      "language": "en-US",
+      "vendor": "unknown"
+    },
+    "parameters": {
+      "repetitions": 5
+    },
+    "metrics": {
+      "configurations": [
+        {
+          "algorithm": "pbkdf2-sha256",
+          "parameters": {
+            "iterations": 100000,
+            "dkLen": 32
+          },
+          "timingsMs": [
+            14.063318000000038,
+            12.655651000000034,
+            12.392945000000054,
+            12.773171000000048,
+            12.385211000000027
+          ],
+          "stats": {
+            "mean": 12.85405920000004,
+            "median": 12.655651000000034,
+            "min": 12.385211000000027,
+            "max": 14.063318000000038,
+            "stddev": 0.623002487986813,
+            "samples": 5
+          }
+        },
+        {
+          "algorithm": "pbkdf2-sha256",
+          "parameters": {
+            "iterations": 200000,
+            "dkLen": 32
+          },
+          "timingsMs": [
+            25.039896999999996,
+            24.124742000000083,
+            25.105728,
+            24.709050000000047,
+            25.553641000000084
+          ],
+          "stats": {
+            "mean": 24.90661160000004,
+            "median": 25.039896999999996,
+            "min": 24.124742000000083,
+            "max": 25.553641000000084,
+            "stddev": 0.4746388185273428,
+            "samples": 5
+          }
+        },
+        {
+          "algorithm": "pbkdf2-sha256",
+          "parameters": {
+            "iterations": 310000,
+            "dkLen": 32
+          },
+          "timingsMs": [
+            37.67258400000003,
+            38.615745999999945,
+            38.298974000000044,
+            39.446151999999984,
+            50.98678099999995
+          ],
+          "stats": {
+            "mean": 41.00404739999999,
+            "median": 38.615745999999945,
+            "min": 37.67258400000003,
+            "max": 50.98678099999995,
+            "stddev": 5.023983723462449,
+            "samples": 5
+          }
+        },
+        {
+          "algorithm": "pbkdf2-sha256",
+          "parameters": {
+            "iterations": 400000,
+            "dkLen": 32
+          },
+          "timingsMs": [
+            54.17038100000002,
+            49.99470299999996,
+            49.31204200000002,
+            49.34978799999999,
+            50.82123999999999
+          ],
+          "stats": {
+            "mean": 50.729630799999995,
+            "median": 49.99470299999996,
+            "min": 49.31204200000002,
+            "max": 54.17038100000002,
+            "stddev": 1.8055911615941729,
+            "samples": 5
+          }
+        },
+        {
+          "algorithm": "pbkdf2-sha256",
+          "parameters": {
+            "iterations": 600000,
+            "dkLen": 32
+          },
+          "timingsMs": [
+            74.97836900000016,
+            76.27049499999998,
+            79.40198399999986,
+            77.49416300000007,
+            77.286742
+          ],
+          "stats": {
+            "mean": 77.08635060000002,
+            "median": 77.286742,
+            "min": 74.97836900000016,
+            "max": 79.40198399999986,
+            "stddev": 1.4613577587963846,
+            "samples": 5
+          }
+        },
+        {
+          "algorithm": "argon2id",
+          "parameters": {
+            "iterations": 2,
+            "memorySize": 65536,
+            "parallelism": 1,
+            "dkLen": 32
+          },
+          "timingsMs": [
+            126.92023899999981,
+            119.03482399999984,
+            126.95402000000013,
+            122.80106799999999,
+            125.02114400000005
+          ],
+          "stats": {
+            "mean": 124.14625899999996,
+            "median": 125.02114400000005,
+            "min": 119.03482399999984,
+            "max": 126.95402000000013,
+            "stddev": 2.975910523602932,
+            "samples": 5
+          }
+        },
+        {
+          "algorithm": "argon2id",
+          "parameters": {
+            "iterations": 3,
+            "memorySize": 65536,
+            "parallelism": 1,
+            "dkLen": 32
+          },
+          "timingsMs": [
+            161.65243899999996,
+            169.23809100000017,
+            166.591449,
+            168.6153979999999,
+            163.79932699999972
+          ],
+          "stats": {
+            "mean": 165.97934079999996,
+            "median": 166.591449,
+            "min": 161.65243899999996,
+            "max": 169.23809100000017,
+            "stddev": 2.878105843474664,
+            "samples": 5
+          }
+        },
+        {
+          "algorithm": "argon2id",
+          "parameters": {
+            "iterations": 3,
+            "memorySize": 262144,
+            "parallelism": 1,
+            "dkLen": 32
+          },
+          "timingsMs": [
+            664.6430620000001,
+            660.1705689999999,
+            674.4512629999999,
+            678.8374759999997,
+            661.9245030000002
+          ],
+          "stats": {
+            "mean": 668.0053746,
+            "median": 664.6430620000001,
+            "min": 660.1705689999999,
+            "max": 678.8374759999997,
+            "stddev": 7.328713696559915,
+            "samples": 5
+          }
+        }
+      ]
+    },
+    "result": "KDF benchmark completed; PBKDF2 baseline preserved and Argon2id benchmarked separately."
+  },
+  "recovery": {
+    "experiment": "recovery-benchmark",
+    "timestamp": "2026-10-05T17:38:01.093Z",
+    "browser": {
+      "userAgent": "Node.js/22",
+      "platform": "Linux x86_64",
+      "language": "en-US",
+      "vendor": "unknown"
+    },
+    "parameters": {
+      "thresholdConfigs": [
+        {
+          "shares": 3,
+          "threshold": 2
+        },
+        {
+          "shares": 5,
+          "threshold": 2
+        },
+        {
+          "shares": 5,
+          "threshold": 3
+        },
+        {
+          "shares": 7,
+          "threshold": 3
+        },
+        {
+          "shares": 7,
+          "threshold": 4
+        },
+        {
+          "shares": 10,
+          "threshold": 5
+        }
+      ]
+    },
+    "metrics": {
+      "results": [
+        {
+          "threshold": 2,
+          "totalShares": 3,
+          "generationMs": 0,
+          "reconstructionMs": 44.541237000000365,
+          "successRate": 1,
+          "insufficientShareFailure": true
+        },
+        {
+          "threshold": 2,
+          "totalShares": 5,
+          "generationMs": 0,
+          "reconstructionMs": 41.839318000000276,
+          "successRate": 1,
+          "insufficientShareFailure": true
+        },
+        {
+          "threshold": 3,
+          "totalShares": 5,
+          "generationMs": 0,
+          "reconstructionMs": 40.67498599999999,
+          "successRate": 1,
+          "insufficientShareFailure": true
+        },
+        {
+          "threshold": 3,
+          "totalShares": 7,
+          "generationMs": 0,
+          "reconstructionMs": 47.39858599999934,
+          "successRate": 1,
+          "insufficientShareFailure": true
+        },
+        {
+          "threshold": 4,
+          "totalShares": 7,
+          "generationMs": 0,
+          "reconstructionMs": 41.73845900000015,
+          "successRate": 1,
+          "insufficientShareFailure": true
+        },
+        {
+          "threshold": 5,
+          "totalShares": 10,
+          "generationMs": 0,
+          "reconstructionMs": 42.662671999999475,
+          "successRate": 1,
+          "insufficientShareFailure": true
+        }
+      ]
+    },
+    "result": "Recovery benchmark completed for threshold configurations."
+  },
+  "tamper": {
+    "experiment": "tamper-detection",
+    "timestamp": "2026-10-05T17:38:01.094Z",
+    "browser": {
+      "userAgent": "Node.js/22",
+      "platform": "Linux x86_64",
+      "language": "en-US",
+      "vendor": "unknown"
+    },
+    "parameters": {
+      "mutationCases": [
+        "ciphertext-mutated",
+        "nonce-mutated",
+        "wrapping-key-mutated"
+      ]
+    },
+    "metrics": {
+      "tests": [
+        {
+          "test": "ciphertext-mutated",
+          "mutation": "ciphertext-mutated",
+          "expectedResult": "decryption failure",
+          "actualResult": "decryption failed",
+          "pass": true
+        },
+        {
+          "test": "nonce-mutated",
+          "mutation": "nonce-mutated",
+          "expectedResult": "decryption failure",
+          "actualResult": "decryption failed",
+          "pass": true
+        },
+        {
+          "test": "wrapping-key-mutated",
+          "mutation": "wrapping-key-mutated",
+          "expectedResult": "decryption failure",
+          "actualResult": "decryption failed",
+          "pass": true
+        }
+      ]
+    },
+    "result": "AES-GCM tamper detection validated for ciphertext and nonce mutations."
+  },
+  "offline": {
+    "experiment": "wrong-password-offline-simulation",
+    "timestamp": "2026-10-05T17:38:01.539Z",
+    "browser": {
+      "userAgent": "Node.js/22",
+      "platform": "Linux x86_64",
+      "language": "en-US",
+      "vendor": "unknown"
+    },
+    "parameters": {
+      "candidates": 10,
+      "note": "Synthetic control experiment only; no real credentials"
+    },
+    "metrics": {
+      "attempts": 10,
+      "timingsMs": [
+        42.46584499999972,
+        41.48770599999989,
+        39.7600709999997,
+        37.674841000000015,
+        39.329477000000225,
+        39.632354000000305,
+        40.44738300000063,
+        40.3863280000005,
+        40.91539999999986,
+        40.346942999999555
+      ],
+      "stats": {
+        "mean": 40.24463480000004,
+        "median": 40.36663550000003,
+        "min": 37.674841000000015,
+        "max": 42.46584499999972,
+        "stddev": 1.2268504923354606,
+        "samples": 10
+      },
+      "attemptsPerSecond": 10
+    },
+    "result": "Offline attack-resistance benchmark executed on synthetic data only."
+  },
+  "vault": {
+    "experiment": "vault-performance",
+    "timestamp": "2026-10-05T17:38:04.498Z",
+    "browser": {
+      "userAgent": "Node.js/22",
+      "platform": "Linux x86_64",
+      "language": "en-US",
+      "vendor": "unknown"
+    },
+    "parameters": {
+      "entryCounts": [
+        10,
+        50,
+        100,
+        500,
+        1000
+      ]
+    },
+    "metrics": {
+      "results": [
+        {
+          "entryCount": 10,
+          "encryptionTimeMs": 2.9587710000005245,
+          "decryptionTimeMs": 41.84639599999991,
+          "serializedVaultSize": 2826,
+          "encryptedVaultSize": 2826,
+          "importTimeMs": 0,
+          "exportTimeMs": 0,
+          "openedEntryCount": 10
+        },
+        {
+          "entryCount": 50,
+          "encryptionTimeMs": 14.646509000000151,
+          "decryptionTimeMs": 39.89602599999944,
+          "serializedVaultSize": 12370,
+          "encryptedVaultSize": 12370,
+          "importTimeMs": 0,
+          "exportTimeMs": 0,
+          "openedEntryCount": 50
+        },
+        {
+          "entryCount": 100,
+          "encryptionTimeMs": 27.5208819999998,
+          "decryptionTimeMs": 40.369793000000755,
+          "serializedVaultSize": 24310,
+          "encryptedVaultSize": 24310,
+          "importTimeMs": 0,
+          "exportTimeMs": 0,
+          "openedEntryCount": 100
+        },
+        {
+          "entryCount": 500,
+          "encryptionTimeMs": 476.7841559999997,
+          "decryptionTimeMs": 41.60496299999977,
+          "serializedVaultSize": 121374,
+          "encryptedVaultSize": 121374,
+          "importTimeMs": 0,
+          "exportTimeMs": 0,
+          "openedEntryCount": 500
+        },
+        {
+          "entryCount": 1000,
+          "encryptionTimeMs": 2011.7389430000003,
+          "decryptionTimeMs": 46.80622399999993,
+          "serializedVaultSize": 242714,
+          "encryptedVaultSize": 242714,
+          "importTimeMs": 0,
+          "exportTimeMs": 0,
+          "openedEntryCount": 1000
+        }
+      ]
+    },
+    "result": "Synthetic vault performance benchmark completed."
+  },
+  "rotation": {
+    "experiment": "key-rotation",
+    "timestamp": "2026-10-05T17:38:04.704Z",
+    "browser": {
+      "userAgent": "Node.js/22",
+      "platform": "Linux x86_64",
+      "language": "en-US",
+      "vendor": "unknown"
+    },
+    "parameters": {
+      "recoveryThreshold": 2
+    },
+    "metrics": {
+      "originalUnlockValid": true,
+      "rotatedUnlockValid": true,
+      "oldPasswordDenied": true
+    },
+    "result": "Recovery and rotation cycle verified with a new master password and old password rejection."
+  }
+}

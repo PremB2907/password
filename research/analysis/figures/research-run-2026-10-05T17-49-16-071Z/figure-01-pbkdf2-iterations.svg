@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="620" viewBox="0 0 1040 620" role="img" aria-labelledby="title desc">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<title id="title">Figure 1. PBKDF2 Iteration Count and Median Derivation Latency</title>
+<desc id="desc">Thirty measured derivations per configuration; 95% bootstrap intervals for the median. Raw source research-run-2026-10-05T17-49-16-071Z.json.</desc>
+<text x="100" y="38" class="heading">Figure 1. PBKDF2 Iteration Count and Median Derivation Latency</text>
+<text x="100" y="66" class="subtitle">Thirty measured derivations per configuration; 95% bootstrap intervals for the median.</text>
+<g font-family="Georgia, serif" fill="#252a2d">
+<line x1="100" y1="470" x2="970" y2="470" stroke="#d9dddf" stroke-width="1"/>
+<text x="86" y="475" text-anchor="end" font-size="13">0.00</text>
+<line x1="100" y1="394.4" x2="970" y2="394.4" stroke="#d9dddf" stroke-width="1"/>
+<text x="86" y="399.4" text-anchor="end" font-size="13">16</text>
+<line x1="100" y1="318.79999999999995" x2="970" y2="318.79999999999995" stroke="#d9dddf" stroke-width="1"/>
+<text x="86" y="323.79999999999995" text-anchor="end" font-size="13">32</text>
+<line x1="100" y1="243.19999999999996" x2="970" y2="243.19999999999996" stroke="#d9dddf" stroke-width="1"/>
+<text x="86" y="248.19999999999996" text-anchor="end" font-size="13">48</text>
+<line x1="100" y1="167.59999999999997" x2="970" y2="167.59999999999997" stroke="#d9dddf" stroke-width="1"/>
+<text x="86" y="172.59999999999997" text-anchor="end" font-size="13">65</text>
+<line x1="100" y1="92" x2="970" y2="92" stroke="#d9dddf" stroke-width="1"/>
+<text x="86" y="97" text-anchor="end" font-size="13">81</text>
+<line x1="100" y1="92" x2="100" y2="470" stroke="#596166"/>
+<line x1="100" y1="470" x2="970" y2="470" stroke="#596166"/>
+<line x1="100" y1="470" x2="100" y2="475" stroke="#596166"/>
+<text x="100" y="495" text-anchor="middle" font-size="12">100k</text>
+<line x1="317.5" y1="470" x2="317.5" y2="475" stroke="#596166"/>
+<text x="317.5" y="495" text-anchor="middle" font-size="12">200k</text>
+<line x1="535" y1="470" x2="535" y2="475" stroke="#596166"/>
+<text x="535" y="495" text-anchor="middle" font-size="12">310k</text>
+<line x1="752.5" y1="470" x2="752.5" y2="475" stroke="#596166"/>
+<text x="752.5" y="495" text-anchor="middle" font-size="12">400k</text>
+<line x1="970" y1="470" x2="970" y2="475" stroke="#596166"/>
+<text x="970" y="495" text-anchor="middle" font-size="12">600k</text>
+<text x="535" y="532" text-anchor="middle" font-size="15">PBKDF2-HMAC-SHA256 iterations</text>
+<text transform="translate(30 281) rotate(-90)" text-anchor="middle" font-size="15">Latency (ms)</text>
+<path d="M 100 408.6429816553345 L 317.5 349.17197080276605 L 535 284.29111472968896 L 752.5 222.24516526444333 L 970 101.74237723935823 " fill="none" stroke="#187b73" stroke-width="3"/>
+<line x1="100" y1="406.1552410901435" x2="100" y2="410.8470907363409" stroke="#187b73" stroke-width="1.5"/>
+<line x1="95" y1="406.1552410901435" x2="105" y2="406.1552410901435" stroke="#187b73"/>
+<line x1="95" y1="410.8470907363409" x2="105" y2="410.8470907363409" stroke="#187b73"/>
+<circle cx="100" cy="408.6429816553345" r="5" fill="#187b73"/>
+<line x1="317.5" y1="344.7699947968959" x2="317.5" y2="351.19087717316546" stroke="#187b73" stroke-width="1.5"/>
+<line x1="312.5" y1="344.7699947968959" x2="322.5" y2="344.7699947968959" stroke="#187b73"/>
+<line x1="312.5" y1="351.19087717316546" x2="322.5" y2="351.19087717316546" stroke="#187b73"/>
+<circle cx="317.5" cy="349.17197080276605" r="5" fill="#187b73"/>
+<line x1="535" y1="278.1858220837157" x2="535" y2="285.28998858493946" stroke="#187b73" stroke-width="1.5"/>
+<line x1="530" y1="278.1858220837157" x2="540" y2="278.1858220837157" stroke="#187b73"/>
+<line x1="530" y1="285.28998858493946" x2="540" y2="285.28998858493946" stroke="#187b73"/>
+<circle cx="535" cy="284.29111472968896" r="5" fill="#187b73"/>
+<line x1="752.5" y1="216.0397122557602" x2="752.5" y2="226.52298000471407" stroke="#187b73" stroke-width="1.5"/>
+<line x1="747.5" y1="216.0397122557602" x2="757.5" y2="216.0397122557602" stroke="#187b73"/>
+<line x1="747.5" y1="226.52298000471407" x2="757.5" y2="226.52298000471407" stroke="#187b73"/>
+<circle cx="752.5" cy="222.24516526444333" r="5" fill="#187b73"/>
+<line x1="970" y1="92" x2="970" y2="110.75145343747357" stroke="#187b73" stroke-width="1.5"/>
+<line x1="965" y1="92" x2="975" y2="92" stroke="#187b73"/>
+<line x1="965" y1="110.75145343747357" x2="975" y2="110.75145343747357" stroke="#187b73"/>
+<circle cx="970" cy="101.74237723935823" r="5" fill="#187b73"/>
+<line x1="100" y1="552" x2="124" y2="552" stroke="#187b73" stroke-width="3"/>
+<text x="131" y="557" font-size="13">PBKDF2 median</text>
+<text x="100" y="590" font-size="11" fill="#586168">Error bars: 95% percentile-bootstrap CI for median. Source SHA-256: 2689751c3db02db972960a53cb4ec58ecc9e69dd989650d981f1d5b885725d63</text>
+</g><style>.heading{font:600 24px Georgia,serif;fill:#202629}.subtitle{font:14px Georgia,serif;fill:#596166}</style></svg>

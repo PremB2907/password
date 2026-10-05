@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="620" viewBox="0 0 1040 620" role="img" aria-labelledby="title desc">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<title id="title">Figure 4. Shamir Threshold Configuration and Reconstruction Latency</title>
+<desc id="desc">Exact-threshold reconstruction, 30 independent generated secrets per configuration. Raw source research-run-2026-10-05T17-49-16-071Z.json.</desc>
+<text x="100" y="38" class="heading">Figure 4. Shamir Threshold Configuration and Reconstruction Latency</text>
+<text x="100" y="66" class="subtitle">Exact-threshold reconstruction, 30 independent generated secrets per configuration.</text>
+<g font-family="Georgia, serif" fill="#252a2d">
+<line x1="100" y1="470" x2="970" y2="470" stroke="#d9dddf" stroke-width="1"/>
+<text x="86" y="475" text-anchor="end" font-size="13">0.00</text>
+<line x1="100" y1="394.4" x2="970" y2="394.4" stroke="#d9dddf" stroke-width="1"/>
+<text x="86" y="399.4" text-anchor="end" font-size="13">0.39</text>
+<line x1="100" y1="318.79999999999995" x2="970" y2="318.79999999999995" stroke="#d9dddf" stroke-width="1"/>
+<text x="86" y="323.79999999999995" text-anchor="end" font-size="13">0.79</text>
+<line x1="100" y1="243.19999999999996" x2="970" y2="243.19999999999996" stroke="#d9dddf" stroke-width="1"/>
+<text x="86" y="248.19999999999996" text-anchor="end" font-size="13">1.18</text>
+<line x1="100" y1="167.59999999999997" x2="970" y2="167.59999999999997" stroke="#d9dddf" stroke-width="1"/>
+<text x="86" y="172.59999999999997" text-anchor="end" font-size="13">1.58</text>
+<line x1="100" y1="92" x2="970" y2="92" stroke="#d9dddf" stroke-width="1"/>
+<text x="86" y="97" text-anchor="end" font-size="13">1.97</text>
+<line x1="100" y1="92" x2="100" y2="470" stroke="#596166"/>
+<line x1="100" y1="470" x2="970" y2="470" stroke="#596166"/>
+<line x1="100" y1="470" x2="100" y2="475" stroke="#596166"/>
+<text x="100" y="495" text-anchor="middle" font-size="12">2-of-3</text>
+<line x1="274" y1="470" x2="274" y2="475" stroke="#596166"/>
+<text x="274" y="495" text-anchor="middle" font-size="12">2-of-5</text>
+<line x1="448" y1="470" x2="448" y2="475" stroke="#596166"/>
+<text x="448" y="495" text-anchor="middle" font-size="12">3-of-5</text>
+<line x1="622" y1="470" x2="622" y2="475" stroke="#596166"/>
+<text x="622" y="495" text-anchor="middle" font-size="12">3-of-7</text>
+<line x1="796" y1="470" x2="796" y2="475" stroke="#596166"/>
+<text x="796" y="495" text-anchor="middle" font-size="12">4-of-7</text>
+<line x1="970" y1="470" x2="970" y2="475" stroke="#596166"/>
+<text x="970" y="495" text-anchor="middle" font-size="12">5-of-10</text>
+<text x="535" y="532" text-anchor="middle" font-size="15">Threshold k-of-n</text>
+<text transform="translate(30 281) rotate(-90)" text-anchor="middle" font-size="15">Latency (ms)</text>
+<path d="M 100 339.7427653660947 L 274 358.89299980484 L 448 238.24117294589294 L 622 308.04448903809276 L 796 260.4094568452513 L 970 215.08741717954976 " fill="none" stroke="#486b9a" stroke-width="3"/>
+<line x1="100" y1="290.81141225998965" x2="100" y2="360.2940217183394" stroke="#486b9a" stroke-width="1.5"/>
+<line x1="95" y1="290.81141225998965" x2="105" y2="290.81141225998965" stroke="#486b9a"/>
+<line x1="95" y1="360.2940217183394" x2="105" y2="360.2940217183394" stroke="#486b9a"/>
+<circle cx="100" cy="339.7427653660947" r="5" fill="#486b9a"/>
+<line x1="274" y1="327.4194382433555" x2="274" y2="362.97021379396506" stroke="#486b9a" stroke-width="1.5"/>
+<line x1="269" y1="327.4194382433555" x2="279" y2="327.4194382433555" stroke="#486b9a"/>
+<line x1="269" y1="362.97021379396506" x2="279" y2="362.97021379396506" stroke="#486b9a"/>
+<circle cx="274" cy="358.89299980484" r="5" fill="#486b9a"/>
+<line x1="448" y1="186.54892905552128" x2="448" y2="306.2985471863967" stroke="#486b9a" stroke-width="1.5"/>
+<line x1="443" y1="186.54892905552128" x2="453" y2="186.54892905552128" stroke="#486b9a"/>
+<line x1="443" y1="306.2985471863967" x2="453" y2="306.2985471863967" stroke="#486b9a"/>
+<circle cx="448" cy="238.24117294589294" r="5" fill="#486b9a"/>
+<line x1="622" y1="225.3853445635666" x2="622" y2="315.56764844988106" stroke="#486b9a" stroke-width="1.5"/>
+<line x1="617" y1="225.3853445635666" x2="627" y2="225.3853445635666" stroke="#486b9a"/>
+<line x1="617" y1="315.56764844988106" x2="627" y2="315.56764844988106" stroke="#486b9a"/>
+<circle cx="622" cy="308.04448903809276" r="5" fill="#486b9a"/>
+<line x1="796" y1="187.77777811567847" x2="796" y2="266.42182098746264" stroke="#486b9a" stroke-width="1.5"/>
+<line x1="791" y1="187.77777811567847" x2="801" y2="187.77777811567847" stroke="#486b9a"/>
+<line x1="791" y1="266.42182098746264" x2="801" y2="266.42182098746264" stroke="#486b9a"/>
+<circle cx="796" cy="260.4094568452513" r="5" fill="#486b9a"/>
+<line x1="970" y1="92" x2="970" y2="221.90666811601463" stroke="#486b9a" stroke-width="1.5"/>
+<line x1="965" y1="92" x2="975" y2="92" stroke="#486b9a"/>
+<line x1="965" y1="221.90666811601463" x2="975" y2="221.90666811601463" stroke="#486b9a"/>
+<circle cx="970" cy="215.08741717954976" r="5" fill="#486b9a"/>
+<line x1="100" y1="552" x2="124" y2="552" stroke="#486b9a" stroke-width="3"/>
+<text x="131" y="557" font-size="13">Exact-k median</text>
+<text x="100" y="590" font-size="11" fill="#586168">Error bars: 95% percentile-bootstrap CI for median. Source SHA-256: 2689751c3db02db972960a53cb4ec58ecc9e69dd989650d981f1d5b885725d63</text>
+</g><style>.heading{font:600 24px Georgia,serif;fill:#202629}.subtitle{font:14px Georgia,serif;fill:#596166}</style></svg>

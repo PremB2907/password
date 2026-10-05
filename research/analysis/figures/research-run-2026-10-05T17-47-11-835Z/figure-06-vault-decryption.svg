@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="620" viewBox="0 0 1040 620" role="img" aria-labelledby="title desc">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<title id="title">Figure 6. Vault Entry Count and Payload Decryption Latency</title>
+<desc id="desc">One bulk payload operation per observation; key derivation and data construction excluded. Raw source research-run-2026-10-05T17-47-11-835Z.json.</desc>
+<text x="100" y="38" class="heading">Figure 6. Vault Entry Count and Payload Decryption Latency</text>
+<text x="100" y="66" class="subtitle">One bulk payload operation per observation; key derivation and data construction excluded.</text>
+<g font-family="Georgia, serif" fill="#252a2d">
+<line x1="100" y1="470" x2="970" y2="470" stroke="#d9dddf" stroke-width="1"/>
+<text x="86" y="475" text-anchor="end" font-size="13">0.00</text>
+<line x1="100" y1="394.4" x2="970" y2="394.4" stroke="#d9dddf" stroke-width="1"/>
+<text x="86" y="399.4" text-anchor="end" font-size="13">0.28</text>
+<line x1="100" y1="318.79999999999995" x2="970" y2="318.79999999999995" stroke="#d9dddf" stroke-width="1"/>
+<text x="86" y="323.79999999999995" text-anchor="end" font-size="13">0.56</text>
+<line x1="100" y1="243.19999999999996" x2="970" y2="243.19999999999996" stroke="#d9dddf" stroke-width="1"/>
+<text x="86" y="248.19999999999996" text-anchor="end" font-size="13">0.84</text>
+<line x1="100" y1="167.59999999999997" x2="970" y2="167.59999999999997" stroke="#d9dddf" stroke-width="1"/>
+<text x="86" y="172.59999999999997" text-anchor="end" font-size="13">1.12</text>
+<line x1="100" y1="92" x2="970" y2="92" stroke="#d9dddf" stroke-width="1"/>
+<text x="86" y="97" text-anchor="end" font-size="13">1.40</text>
+<line x1="100" y1="92" x2="100" y2="470" stroke="#596166"/>
+<line x1="100" y1="470" x2="970" y2="470" stroke="#596166"/>
+<line x1="100" y1="470" x2="100" y2="475" stroke="#596166"/>
+<text x="100" y="495" text-anchor="middle" font-size="12">10</text>
+<line x1="317.5" y1="470" x2="317.5" y2="475" stroke="#596166"/>
+<text x="317.5" y="495" text-anchor="middle" font-size="12">50</text>
+<line x1="535" y1="470" x2="535" y2="475" stroke="#596166"/>
+<text x="535" y="495" text-anchor="middle" font-size="12">100</text>
+<line x1="752.5" y1="470" x2="752.5" y2="475" stroke="#596166"/>
+<text x="752.5" y="495" text-anchor="middle" font-size="12">500</text>
+<line x1="970" y1="470" x2="970" y2="475" stroke="#596166"/>
+<text x="970" y="495" text-anchor="middle" font-size="12">1000</text>
+<text x="535" y="532" text-anchor="middle" font-size="15">Synthetic vault entries</text>
+<text transform="translate(30 281) rotate(-90)" text-anchor="middle" font-size="15">Latency (ms)</text>
+<path d="M 100 445.39749166698675 L 317.5 428.9163447616595 L 535 402.3505738733919 L 752.5 218.72083673803607 L 970 122.53093389035058 " fill="none" stroke="#486b9a" stroke-width="3"/>
+<line x1="100" y1="441.6003429064719" x2="100" y2="454.0468593852969" stroke="#486b9a" stroke-width="1.5"/>
+<line x1="95" y1="441.6003429064719" x2="105" y2="441.6003429064719" stroke="#486b9a"/>
+<line x1="95" y1="454.0468593852969" x2="105" y2="454.0468593852969" stroke="#486b9a"/>
+<circle cx="100" cy="445.39749166698675" r="5" fill="#486b9a"/>
+<line x1="317.5" y1="423.1467788216909" x2="317.5" y2="433.06015752084136" stroke="#486b9a" stroke-width="1.5"/>
+<line x1="312.5" y1="423.1467788216909" x2="322.5" y2="423.1467788216909" stroke="#486b9a"/>
+<line x1="312.5" y1="433.06015752084136" x2="322.5" y2="433.06015752084136" stroke="#486b9a"/>
+<circle cx="317.5" cy="428.9163447616595" r="5" fill="#486b9a"/>
+<line x1="535" y1="386.84641362213074" x2="535" y2="421.4650208966534" stroke="#486b9a" stroke-width="1.5"/>
+<line x1="530" y1="386.84641362213074" x2="540" y2="386.84641362213074" stroke="#486b9a"/>
+<line x1="530" y1="421.4650208966534" x2="540" y2="421.4650208966534" stroke="#486b9a"/>
+<circle cx="535" cy="402.3505738733919" r="5" fill="#486b9a"/>
+<line x1="752.5" y1="150.8535844563708" x2="752.5" y2="250.09453436520818" stroke="#486b9a" stroke-width="1.5"/>
+<line x1="747.5" y1="150.8535844563708" x2="757.5" y2="150.8535844563708" stroke="#486b9a"/>
+<line x1="747.5" y1="250.09453436520818" x2="757.5" y2="250.09453436520818" stroke="#486b9a"/>
+<circle cx="752.5" cy="218.72083673803607" r="5" fill="#486b9a"/>
+<line x1="970" y1="92" x2="970" y2="138.1243517086998" stroke="#486b9a" stroke-width="1.5"/>
+<line x1="965" y1="92" x2="975" y2="92" stroke="#486b9a"/>
+<line x1="965" y1="138.1243517086998" x2="975" y2="138.1243517086998" stroke="#486b9a"/>
+<circle cx="970" cy="122.53093389035058" r="5" fill="#486b9a"/>
+<line x1="100" y1="552" x2="124" y2="552" stroke="#486b9a" stroke-width="3"/>
+<text x="131" y="557" font-size="13">Median decryption</text>
+<text x="100" y="590" font-size="11" fill="#586168">Error bars: 95% percentile-bootstrap CI for median. Source SHA-256: f81b35854fab52d1757d55039778d75c8a2b372918fedbf606be949dc14a27ba</text>
+</g><style>.heading{font:600 24px Georgia,serif;fill:#202629}.subtitle{font:14px Georgia,serif;fill:#596166}</style></svg>

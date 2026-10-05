@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="620" viewBox="0 0 1040 620" role="img" aria-labelledby="title desc">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<title id="title">Figure 3. Normalized PBKDF2 and Argon2id Derivation Latency</title>
+<desc id="desc">Median latency ratios relative to the measured PBKDF2 100k configuration. Raw source research-run-2026-10-05T17-49-16-071Z.json.</desc>
+<text x="100" y="38" class="heading">Figure 3. Normalized PBKDF2 and Argon2id Derivation Latency</text>
+<text x="100" y="66" class="subtitle">Median latency ratios relative to the measured PBKDF2 100k configuration.</text>
+<g font-family="Georgia, serif" fill="#252a2d">
+<line x1="100" y1="470" x2="970" y2="470" stroke="#d9dddf" stroke-width="1"/>
+<text x="86" y="475" text-anchor="end" font-size="13">0.00</text>
+<line x1="100" y1="394.4" x2="970" y2="394.4" stroke="#d9dddf" stroke-width="1"/>
+<text x="86" y="399.4" text-anchor="end" font-size="13">11</text>
+<line x1="100" y1="318.79999999999995" x2="970" y2="318.79999999999995" stroke="#d9dddf" stroke-width="1"/>
+<text x="86" y="323.79999999999995" text-anchor="end" font-size="13">21</text>
+<line x1="100" y1="243.19999999999996" x2="970" y2="243.19999999999996" stroke="#d9dddf" stroke-width="1"/>
+<text x="86" y="248.19999999999996" text-anchor="end" font-size="13">32</text>
+<line x1="100" y1="167.59999999999997" x2="970" y2="167.59999999999997" stroke="#d9dddf" stroke-width="1"/>
+<text x="86" y="172.59999999999997" text-anchor="end" font-size="13">42</text>
+<line x1="100" y1="92" x2="970" y2="92" stroke="#d9dddf" stroke-width="1"/>
+<text x="86" y="97" text-anchor="end" font-size="13">53</text>
+<line x1="100" y1="92" x2="100" y2="470" stroke="#596166"/>
+<line x1="100" y1="470" x2="970" y2="470" stroke="#596166"/>
+<line x1="100" y1="470" x2="100" y2="475" stroke="#596166"/>
+<text x="100" y="495" text-anchor="middle" font-size="12">100k</text>
+<line x1="224.28571428571428" y1="470" x2="224.28571428571428" y2="475" stroke="#596166"/>
+<text x="224.28571428571428" y="495" text-anchor="middle" font-size="12">200k</text>
+<line x1="348.57142857142856" y1="470" x2="348.57142857142856" y2="475" stroke="#596166"/>
+<text x="348.57142857142856" y="495" text-anchor="middle" font-size="12">310k</text>
+<line x1="472.85714285714283" y1="470" x2="472.85714285714283" y2="475" stroke="#596166"/>
+<text x="472.85714285714283" y="495" text-anchor="middle" font-size="12">400k</text>
+<line x1="597.1428571428571" y1="470" x2="597.1428571428571" y2="475" stroke="#596166"/>
+<text x="597.1428571428571" y="495" text-anchor="middle" font-size="12">600k</text>
+<line x1="721.4285714285714" y1="470" x2="721.4285714285714" y2="475" stroke="#596166"/>
+<text x="721.4285714285714" y="495" text-anchor="middle" font-size="12">2t/64MiB</text>
+<line x1="845.7142857142857" y1="470" x2="845.7142857142857" y2="475" stroke="#596166"/>
+<text x="845.7142857142857" y="495" text-anchor="middle" font-size="12">3t/64MiB</text>
+<line x1="970" y1="470" x2="970" y2="475" stroke="#596166"/>
+<text x="970" y="495" text-anchor="middle" font-size="12">3t/256MiB</text>
+<text x="535" y="532" text-anchor="middle" font-size="15">KDF configuration</text>
+<text transform="translate(30 281) rotate(-90)" text-anchor="middle" font-size="15">Latency (ms)</text>
+<path d="M 100 462.8717534054239 L 224.28571428571428 455.96261665101906 L 348.57142857142856 448.4249827530005 L 472.85714285714283 441.2166985189389 L 597.1428571428571 427.2171005666466 " fill="none" stroke="#187b73" stroke-width="3"/>
+<line x1="100" y1="462.5827362939274" x2="100" y2="463.127819190148" stroke="#187b73" stroke-width="1.5"/>
+<line x1="95" y1="462.5827362939274" x2="105" y2="462.5827362939274" stroke="#187b73"/>
+<line x1="95" y1="463.127819190148" x2="105" y2="463.127819190148" stroke="#187b73"/>
+<circle cx="100" cy="462.8717534054239" r="5" fill="#187b73"/>
+<line x1="224.28571428571428" y1="455.4512102737243" x2="224.28571428571428" y2="456.19716622412125" stroke="#187b73" stroke-width="1.5"/>
+<line x1="219.28571428571428" y1="455.4512102737243" x2="229.28571428571428" y2="455.4512102737243" stroke="#187b73"/>
+<line x1="219.28571428571428" y1="456.19716622412125" x2="229.28571428571428" y2="456.19716622412125" stroke="#187b73"/>
+<circle cx="224.28571428571428" cy="455.96261665101906" r="5" fill="#187b73"/>
+<line x1="348.57142857142856" y1="447.71569092809335" x2="348.57142857142856" y2="448.5410284695166" stroke="#187b73" stroke-width="1.5"/>
+<line x1="343.57142857142856" y1="447.71569092809335" x2="353.57142857142856" y2="447.71569092809335" stroke="#187b73"/>
+<line x1="343.57142857142856" y1="448.5410284695166" x2="353.57142857142856" y2="448.5410284695166" stroke="#187b73"/>
+<circle cx="348.57142857142856" cy="448.4249827530005" r="5" fill="#187b73"/>
+<line x1="472.85714285714283" y1="440.4957704088331" x2="472.85714285714283" y2="441.71368026898534" stroke="#187b73" stroke-width="1.5"/>
+<line x1="467.85714285714283" y1="440.4957704088331" x2="477.85714285714283" y2="440.4957704088331" stroke="#187b73"/>
+<line x1="467.85714285714283" y1="441.71368026898534" x2="477.85714285714283" y2="441.71368026898534" stroke="#187b73"/>
+<circle cx="472.85714285714283" cy="441.2166985189389" r="5" fill="#187b73"/>
+<line x1="597.1428571428571" y1="426.08526480843835" x2="597.1428571428571" y2="428.2637439411462" stroke="#187b73" stroke-width="1.5"/>
+<line x1="592.1428571428571" y1="426.08526480843835" x2="602.1428571428571" y2="426.08526480843835" stroke="#187b73"/>
+<line x1="592.1428571428571" y1="428.2637439411462" x2="602.1428571428571" y2="428.2637439411462" stroke="#187b73"/>
+<circle cx="597.1428571428571" cy="427.2171005666466" r="5" fill="#187b73"/>
+<path d="M 721.4285714285714 406.030294141124 L 845.7142857142857 378.1328374689729 L 970 97.18708278282071 " fill="none" stroke="#c17a18" stroke-width="3"/>
+<line x1="721.4285714285714" y1="404.93108222990094" x2="721.4285714285714" y2="407.7452734059287" stroke="#c17a18" stroke-width="1.5"/>
+<line x1="716.4285714285714" y1="404.93108222990094" x2="726.4285714285714" y2="404.93108222990094" stroke="#c17a18"/>
+<line x1="716.4285714285714" y1="407.7452734059287" x2="726.4285714285714" y2="407.7452734059287" stroke="#c17a18"/>
+<circle cx="721.4285714285714" cy="406.030294141124" r="5" fill="#c17a18"/>
+<line x1="845.7142857142857" y1="376.86270778499266" x2="845.7142857142857" y2="381.2284051058442" stroke="#c17a18" stroke-width="1.5"/>
+<line x1="840.7142857142857" y1="376.86270778499266" x2="850.7142857142857" y2="376.86270778499266" stroke="#c17a18"/>
+<line x1="840.7142857142857" y1="381.2284051058442" x2="850.7142857142857" y2="381.2284051058442" stroke="#c17a18"/>
+<circle cx="845.7142857142857" cy="378.1328374689729" r="5" fill="#c17a18"/>
+<line x1="970" y1="92" x2="970" y2="102.90096458192971" stroke="#c17a18" stroke-width="1.5"/>
+<line x1="965" y1="92" x2="975" y2="92" stroke="#c17a18"/>
+<line x1="965" y1="102.90096458192971" x2="975" y2="102.90096458192971" stroke="#c17a18"/>
+<circle cx="970" cy="97.18708278282071" r="5" fill="#c17a18"/>
+<line x1="100" y1="552" x2="124" y2="552" stroke="#187b73" stroke-width="3"/>
+<text x="131" y="557" font-size="13">pbkdf2-sha256 median / PBKDF2 100k median</text>
+<line x1="490" y1="552" x2="514" y2="552" stroke="#c17a18" stroke-width="3"/>
+<text x="521" y="557" font-size="13">argon2id median / PBKDF2 100k median</text>
+<text x="100" y="590" font-size="11" fill="#586168">Error bars: 95% percentile-bootstrap CI for median, normalized by baseline. Source SHA-256: 2689751c3db02db972960a53cb4ec58ecc9e69dd989650d981f1d5b885725d63</text>
+</g><style>.heading{font:600 24px Georgia,serif;fill:#202629}.subtitle{font:14px Georgia,serif;fill:#596166}</style></svg>

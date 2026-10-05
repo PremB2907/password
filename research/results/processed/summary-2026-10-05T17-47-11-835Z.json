@@ -1,0 +1,4173 @@
+{
+  "schemaVersion": 2,
+  "run": {
+    "id": "2026-10-05T17-47-11-835Z",
+    "startedAt": "2026-10-05T17:47:11.835Z",
+    "completedAt": "2026-10-05T17:47:54.799Z",
+    "repetitions": 30,
+    "warmups": 3,
+    "statisticalMethods": {
+      "standardDeviation": "sample standard deviation (n - 1)",
+      "meanConfidenceInterval": "two-sided 95% Student t interval using Cornish-Fisher approximation",
+      "medianConfidenceInterval": "deterministic percentile bootstrap, 2000 resamples",
+      "binaryConfidenceInterval": "two-sided 95% Wilson score interval"
+    }
+  },
+  "environment": {
+    "operatingSystem": "Ubuntu 26.04.1 LTS",
+    "kernel": "Linux 7.0.0-34-generic",
+    "architecture": "x64",
+    "cpu": "12th Gen Intel(R) Core(TM) i5-12450H",
+    "logicalCpuCount": 12,
+    "memoryTotalBytes": 15648215040,
+    "memoryAvailableAtRunStartBytes": 6855577600,
+    "nodeVersion": "v22.22.1",
+    "opensslVersion": "3.5.5",
+    "applicationVersion": "0.0.0",
+    "browser": {
+      "usedForMeasurement": false,
+      "observedUserAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.139.1 Chrome/150.0.7871.250 Electron/43.6.0 Safari/537.36",
+      "chromeVersion": "150.0.7871.250",
+      "electronVersion": "43.6.0",
+      "vscodeVersion": "1.139.1"
+    },
+    "measurementRuntime": "Node.js global WebCrypto and hash-wasm Argon2id; browser is recorded as host context only",
+    "gitHead": "3192c3ad0823fa4d98fa6806bf9bf8a6973e6ce7",
+    "gitWorkingTreeDirty": true,
+    "gitDirtyPaths": [
+      "EADME.md",
+      "vault/package-lock.json",
+      "vault/package.json",
+      "vault/src/ui/App.tsx",
+      "vault/src/vault/crypto.ts",
+      "vault/src/vault/schema.ts",
+      "vault/src/vault/vault.ts",
+      "docs/",
+      "research/",
+      "vault/scripts/",
+      "vault/src/research/",
+      "vault/src/vault/security.spec.ts"
+    ],
+    "benchmarkSourceSha256": "d90294e705979a42cedd63b5a7f200f8e1eb89f3d28b14a95a99ee9e73876a4e",
+    "benchmarkSourceFiles": [
+      "vault/src/research/index.ts",
+      "vault/src/vault/crypto.ts",
+      "vault/src/vault/vault.ts",
+      "vault/package.json",
+      "vault/scripts/run-research.mts"
+    ]
+  },
+  "summary": {
+    "kdf": {
+      "configurations": [
+        {
+          "algorithm": "pbkdf2-sha256",
+          "parameters": {
+            "iterations": 100000,
+            "dkLen": 32
+          },
+          "timingsMs": [
+            12.711521999999604,
+            14.088260000000446,
+            14.127651000000697,
+            13.847822000001543,
+            13.899586000001364,
+            12.758501000000251,
+            13.511371000000509,
+            12.6728149999999,
+            14.634545999999318,
+            13.086506999998164,
+            13.60852800000066,
+            12.42550399999891,
+            12.190503999998327,
+            12.538658999998006,
+            13.563170000001264,
+            12.636472000001959,
+            13.563474000002316,
+            13.090034000000742,
+            13.594993999999133,
+            13.733812999998918,
+            13.165490999999747,
+            13.240943000000698,
+            13.618835000001127,
+            14.588748999995005,
+            15.177746000001207,
+            13.383647000002384,
+            13.072415000002366,
+            18.676352000002225,
+            13.36645000000135,
+            13.059930000003078
+          ],
+          "warmupTimingsMs": [
+            15.081645999999978,
+            12.742455000000064,
+            13.04579300000023
+          ],
+          "stats": {
+            "mean": 13.587809700000374,
+            "median": 13.447509000001446,
+            "min": 12.190503999998327,
+            "max": 18.676352000002225,
+            "stddev": 1.1786892442589665,
+            "samples": 30,
+            "confidence95": {
+              "lower": 13.147680390704236,
+              "upper": 14.027939009296512,
+              "method": "two-sided Student t interval; df=29; Cornish-Fisher t critical approximation"
+            },
+            "medianConfidence95": {
+              "lower": 13.088270499999453,
+              "upper": 13.618835000001127,
+              "method": "percentile bootstrap of median; 2000 resamples; deterministic LCG seed from observations"
+            }
+          }
+        },
+        {
+          "algorithm": "pbkdf2-sha256",
+          "parameters": {
+            "iterations": 200000,
+            "dkLen": 32
+          },
+          "timingsMs": [
+            25.984357000000273,
+            26.844553999999334,
+            29.27688599999965,
+            27.95710700000018,
+            26.796641999999338,
+            25.460872999999992,
+            26.64282599999933,
+            26.148357999998552,
+            25.509996000000683,
+            27.278097000000344,
+            26.83150200000091,
+            25.553498000001127,
+            26.89566300000297,
+            27.515408999999636,
+            26.21733099999983,
+            26.75964599999861,
+            25.90272300000288,
+            27.727005000000645,
+            28.141379000000597,
+            28.0254359999999,
+            26.29417900000044,
+            28.35471200000029,
+            26.16475100000025,
+            25.564532999997027,
+            25.67278200000146,
+            24.768207000000984,
+            27.826810999998997,
+            36.28485200000432,
+            27.323014999994484,
+            26.983642999999574
+          ],
+          "warmupTimingsMs": [
+            26.466708999999923,
+            25.41820800000005,
+            26.145318999999745
+          ],
+          "stats": {
+            "mean": 27.090225766666755,
+            "median": 26.814072000000124,
+            "min": 24.768207000000984,
+            "max": 36.28485200000432,
+            "stddev": 2.02107442560233,
+            "samples": 30,
+            "confidence95": {
+              "lower": 26.33554500979289,
+              "upper": 27.84490652354062,
+              "method": "two-sided Student t interval; df=29; Cornish-Fisher t critical approximation"
+            },
+            "medianConfidence95": {
+              "lower": 26.19104100000004,
+              "upper": 27.300555999997414,
+              "method": "percentile bootstrap of median; 2000 resamples; deterministic LCG seed from observations"
+            }
+          }
+        },
+        {
+          "algorithm": "pbkdf2-sha256",
+          "parameters": {
+            "iterations": 310000,
+            "dkLen": 32
+          },
+          "timingsMs": [
+            42.29754300000059,
+            45.30760000000009,
+            47.10153700000046,
+            39.51267000000007,
+            40.52247299999908,
+            39.811477999999624,
+            40.590189000000464,
+            38.66078899999957,
+            39.10208500000044,
+            43.70185799999854,
+            41.05247900000177,
+            42.31990600000063,
+            42.94821700000102,
+            42.862826999997196,
+            39.739324999998644,
+            40.0450860000019,
+            42.15011199999935,
+            43.317652000001544,
+            47.319423000000825,
+            42.445245000002615,
+            41.634462999998505,
+            40.086787000000186,
+            39.53329799999847,
+            40.98952299999655,
+            42.667687000001024,
+            40.18795200000022,
+            44.21429999999964,
+            41.73918699999922,
+            38.81341599999723,
+            41.323553999995056
+          ],
+          "warmupTimingsMs": [
+            42.17722500000002,
+            41.61954600000013,
+            40.467391000000134
+          ],
+          "stats": {
+            "mean": 41.73328869999968,
+            "median": 41.47900849999678,
+            "min": 38.66078899999957,
+            "max": 47.319423000000825,
+            "stddev": 2.2326217390275946,
+            "samples": 30,
+            "confidence95": {
+              "lower": 40.899614965634235,
+              "upper": 42.56696243436513,
+              "method": "two-sided Student t interval; df=29; Cornish-Fisher t critical approximation"
+            },
+            "medianConfidence95": {
+              "lower": 40.35521249999965,
+              "upper": 42.445245000002615,
+              "method": "percentile bootstrap of median; 2000 resamples; deterministic LCG seed from observations"
+            }
+          }
+        },
+        {
+          "algorithm": "pbkdf2-sha256",
+          "parameters": {
+            "iterations": 400000,
+            "dkLen": 32
+          },
+          "timingsMs": [
+            50.796478999999636,
+            54.19080099999974,
+            70.43017899999995,
+            51.34916599999997,
+            55.485099999999875,
+            75.90250299999934,
+            52.37623500000154,
+            53.12365999999929,
+            53.12392100000034,
+            55.3282790000012,
+            54.31761199999892,
+            56.08612699999867,
+            51.53328899999906,
+            51.645361999999295,
+            54.23176500000045,
+            54.469412999998895,
+            52.42461199999889,
+            54.358907000001636,
+            54.088637000000745,
+            55.038926000001084,
+            52.44023699999889,
+            52.264179999998305,
+            54.11137499999677,
+            56.71006400000624,
+            52.24201699999685,
+            53.954846999993606,
+            54.729632999995374,
+            52.57032600000093,
+            51.82775599999877,
+            51.89809899999818
+          ],
+          "warmupTimingsMs": [
+            54.44040400000006,
+            51.82216100000005,
+            53.30924600000026
+          ],
+          "stats": {
+            "mean": 54.76831689999941,
+            "median": 54.021741999997175,
+            "min": 50.796478999999636,
+            "max": 75.90250299999934,
+            "stddev": 5.268942634116187,
+            "samples": 30,
+            "confidence95": {
+              "lower": 52.80086356692647,
+              "upper": 56.73577023307235,
+              "method": "two-sided Student t interval; df=29; Cornish-Fisher t critical approximation"
+            },
+            "medianConfidence95": {
+              "lower": 52.43242449999889,
+              "upper": 54.33825950000028,
+              "method": "percentile bootstrap of median; 2000 resamples; deterministic LCG seed from observations"
+            }
+          }
+        },
+        {
+          "algorithm": "pbkdf2-sha256",
+          "parameters": {
+            "iterations": 600000,
+            "dkLen": 32
+          },
+          "timingsMs": [
+            78.98552899999959,
+            80.24355300000025,
+            84.02023999999983,
+            81.49755000000005,
+            80.5110509999995,
+            82.27155599999969,
+            78.2519889999985,
+            80.73229600000013,
+            82.55585900000005,
+            81.17948199999955,
+            78.69428899999912,
+            79.68592700000227,
+            78.30381199999829,
+            78.51123300000108,
+            79.54115000000093,
+            90.57411299999876,
+            80.47864599999957,
+            79.8519750000014,
+            81.39124099999754,
+            80.04417600000306,
+            81.56252099999983,
+            83.8017230000005,
+            83.85067400000116,
+            81.39040599999862,
+            81.97686500000418,
+            81.61983099999634,
+            77.4887560000061,
+            78.46309299999848,
+            78.11030999999639,
+            78.64678900000581
+          ],
+          "warmupTimingsMs": [
+            80.72809399999994,
+            79.224964,
+            76.9750140000001
+          ],
+          "stats": {
+            "mean": 80.80788783333355,
+            "median": 80.49484849999953,
+            "min": 77.4887560000061,
+            "max": 90.57411299999876,
+            "stddev": 2.57451240147801,
+            "samples": 30,
+            "confidence95": {
+              "lower": 79.84655016901199,
+              "upper": 81.76922549765511,
+              "method": "two-sided Student t interval; df=29; Cornish-Fisher t critical approximation"
+            },
+            "medianConfidence95": {
+              "lower": 79.68592700000227,
+              "upper": 81.47688099999868,
+              "method": "percentile bootstrap of median; 2000 resamples; deterministic LCG seed from observations"
+            }
+          }
+        },
+        {
+          "algorithm": "argon2id",
+          "parameters": {
+            "iterations": 2,
+            "memorySize": 65536,
+            "parallelism": 1,
+            "dkLen": 32
+          },
+          "timingsMs": [
+            120.47606500000074,
+            118.35256199999912,
+            123.76047999999992,
+            134.45218900000054,
+            119.3061800000014,
+            123.70752299999913,
+            119.99481399999968,
+            122.53082600000016,
+            115.92797799999971,
+            121.3552380000001,
+            121.34605100000044,
+            120.47992599999998,
+            116.64129300000059,
+            123.37299299999722,
+            116.71126300000105,
+            132.22401499999978,
+            121.8035970000019,
+            119.33767499999885,
+            118.59013699999923,
+            120.47843300000022,
+            120.57328100000086,
+            129.3163310000018,
+            135.2468009999975,
+            122.42940399999497,
+            125.4847379999992,
+            122.11138999999821,
+            119.05225500000233,
+            120.43322699999408,
+            118.97146899999643,
+            118.67385400000057
+          ],
+          "warmupTimingsMs": [
+            135.35487899999998,
+            128.16730999999982,
+            128.0978530000002
+          ],
+          "stats": {
+            "mean": 122.10473293333285,
+            "median": 120.52660350000042,
+            "min": 115.92797799999971,
+            "max": 135.2468009999975,
+            "stddev": 4.866791197386916,
+            "samples": 30,
+            "confidence95": {
+              "lower": 120.28744524819656,
+              "upper": 123.92202061846915,
+              "method": "two-sided Student t interval; df=29; Cornish-Fisher t critical approximation"
+            },
+            "medianConfidence95": {
+              "lower": 119.66624449999927,
+              "upper": 122.27039699999659,
+              "method": "percentile bootstrap of median; 2000 resamples; deterministic LCG seed from observations"
+            }
+          }
+        },
+        {
+          "algorithm": "argon2id",
+          "parameters": {
+            "iterations": 3,
+            "memorySize": 65536,
+            "parallelism": 1,
+            "dkLen": 32
+          },
+          "timingsMs": [
+            181.75380500000028,
+            173.0649139999996,
+            183.32857499999955,
+            182.63223799999923,
+            172.4190440000002,
+            183.1451820000002,
+            167.46098399999937,
+            174.6298509999997,
+            169.2872589999988,
+            176.81226199999946,
+            181.72513999999865,
+            175.27049899999838,
+            185.88982400000168,
+            167.7335529999982,
+            164.80996799999775,
+            177.710325,
+            168.22208600000158,
+            179.95866999999998,
+            179.42955200000142,
+            186.61536099999648,
+            181.09994499999812,
+            183.3539039999996,
+            168.62170100000003,
+            175.65622599999915,
+            170.6330420000013,
+            181.18793999999616,
+            183.98903599999903,
+            176.91560599999502,
+            175.57300399999804,
+            176.3360790000006
+          ],
+          "warmupTimingsMs": [
+            172.64424700000006,
+            180.1598130000002,
+            165.29736400000002
+          ],
+          "stats": {
+            "mean": 176.8421858333326,
+            "median": 176.86393399999724,
+            "min": 164.80996799999775,
+            "max": 186.61536099999648,
+            "stddev": 6.119668482344172,
+            "samples": 30,
+            "confidence95": {
+              "lower": 174.55706659993461,
+              "upper": 179.12730506673057,
+              "method": "two-sided Student t interval; df=29; Cornish-Fisher t critical approximation"
+            },
+            "medianConfidence95": {
+              "lower": 174.95017499999904,
+              "upper": 181.14394249999714,
+              "method": "percentile bootstrap of median; 2000 resamples; deterministic LCG seed from observations"
+            }
+          }
+        },
+        {
+          "algorithm": "argon2id",
+          "parameters": {
+            "iterations": 3,
+            "memorySize": 262144,
+            "parallelism": 1,
+            "dkLen": 32
+          },
+          "timingsMs": [
+            690.7797120000005,
+            702.3104730000005,
+            708.7511340000001,
+            696.5852560000003,
+            694.3848370000014,
+            690.2864659999996,
+            697.5364509999999,
+            694.6637309999987,
+            707.0881320000008,
+            693.843945999999,
+            713.9571609999985,
+            693.9754079999984,
+            701.9437049999979,
+            689.8416189999989,
+            691.5091160000011,
+            697.9674799999993,
+            697.2303780000002,
+            695.2532549999996,
+            703.1262439999991,
+            699.6522179999993,
+            683.8160019999996,
+            699.8484549999994,
+            700.0607519999976,
+            713.5145419999972,
+            695.4863269999987,
+            721.2289309999978,
+            696.1153669999985,
+            702.9521339999992,
+            688.0737020000015,
+            694.468329000003
+          ],
+          "warmupTimingsMs": [
+            757.8810919999999,
+            699.638739,
+            708.6484890000002
+          ],
+          "stats": {
+            "mean": 698.5417087666661,
+            "median": 696.9078170000003,
+            "min": 683.8160019999996,
+            "max": 721.2289309999978,
+            "stddev": 8.15798297880207,
+            "samples": 30,
+            "confidence95": {
+              "lower": 695.4954712352741,
+              "upper": 701.5879462980582,
+              "method": "two-sided Student t interval; df=29; Cornish-Fisher t critical approximation"
+            },
+            "medianConfidence95": {
+              "lower": 694.6637309999987,
+              "upper": 699.9546034999985,
+              "method": "percentile bootstrap of median; 2000 resamples; deterministic LCG seed from observations"
+            }
+          }
+        }
+      ]
+    },
+    "recovery": {
+      "results": [
+        {
+          "threshold": 2,
+          "totalShares": 3,
+          "samples": [
+            {
+              "repetition": 1,
+              "generationMs": 4.196820999997726,
+              "exactThresholdMs": 1.7912859999996726,
+              "aboveThresholdMs": 1.9602989999984857,
+              "insufficientMs": 1.4460350000008475,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 2,
+              "generationMs": 1.5622250000014901,
+              "exactThresholdMs": 0.9833660000003874,
+              "aboveThresholdMs": 1.7759960000039428,
+              "insufficientMs": 0.6137700000035693,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 3,
+              "generationMs": 1.5205019999993965,
+              "exactThresholdMs": 1.2363570000015898,
+              "aboveThresholdMs": 2.1318089999986114,
+              "insufficientMs": 0.44497799999953713,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 4,
+              "generationMs": 1.6985429999986081,
+              "exactThresholdMs": 0.9368030000041472,
+              "aboveThresholdMs": 0.8548870000013267,
+              "insufficientMs": 0.4211910000012722,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 5,
+              "generationMs": 2.1772840000048745,
+              "exactThresholdMs": 0.6756600000007893,
+              "aboveThresholdMs": 1.028055000002496,
+              "insufficientMs": 0.8691610000023502,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 6,
+              "generationMs": 1.5999470000024303,
+              "exactThresholdMs": 0.6568050000059884,
+              "aboveThresholdMs": 1.407969999992929,
+              "insufficientMs": 0.8679380000030505,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 7,
+              "generationMs": 1.2254370000009658,
+              "exactThresholdMs": 0.6690299999972922,
+              "aboveThresholdMs": 2.012079000000085,
+              "insufficientMs": 0.3923629999990226,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 8,
+              "generationMs": 1.1079610000015236,
+              "exactThresholdMs": 1.4809299999978975,
+              "aboveThresholdMs": 1.0901249999951688,
+              "insufficientMs": 0.3919949999981327,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 9,
+              "generationMs": 1.7895940000016708,
+              "exactThresholdMs": 1.0253069999962463,
+              "aboveThresholdMs": 0.8432570000004489,
+              "insufficientMs": 0.38332899999659276,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 10,
+              "generationMs": 1.8451630000054138,
+              "exactThresholdMs": 0.7507189999960246,
+              "aboveThresholdMs": 1.1160820000004605,
+              "insufficientMs": 0.9891809999971883,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 11,
+              "generationMs": 1.1392520000008517,
+              "exactThresholdMs": 0.665435000002617,
+              "aboveThresholdMs": 1.992565000000468,
+              "insufficientMs": 0.48162800000136485,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 12,
+              "generationMs": 1.1883210000014515,
+              "exactThresholdMs": 1.283837000002677,
+              "aboveThresholdMs": 1.255635000001348,
+              "insufficientMs": 0.3741879999943194,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 13,
+              "generationMs": 1.329953000000387,
+              "exactThresholdMs": 1.5458339999968302,
+              "aboveThresholdMs": 0.9008479999974952,
+              "insufficientMs": 0.3760370000018156,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 14,
+              "generationMs": 1.8794940000007045,
+              "exactThresholdMs": 0.6291130000026897,
+              "aboveThresholdMs": 0.844427000003634,
+              "insufficientMs": 0.710120999996434,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 15,
+              "generationMs": 1.7624760000035167,
+              "exactThresholdMs": 0.7406130000017583,
+              "aboveThresholdMs": 1.572827000003599,
+              "insufficientMs": 1.1333339999982854,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 16,
+              "generationMs": 1.261731000005966,
+              "exactThresholdMs": 0.5966259999986505,
+              "aboveThresholdMs": 2.33292999999685,
+              "insufficientMs": 0.3892249999989872,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 17,
+              "generationMs": 1.1318650000030175,
+              "exactThresholdMs": 1.3966359999976703,
+              "aboveThresholdMs": 1.2483749999955762,
+              "insufficientMs": 0.3717880000040168,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 18,
+              "generationMs": 1.4711999999999534,
+              "exactThresholdMs": 1.0981870000032359,
+              "aboveThresholdMs": 0.8488189999989117,
+              "insufficientMs": 0.36773399999947287,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 19,
+              "generationMs": 2.0335140000024694,
+              "exactThresholdMs": 0.6073729999989155,
+              "aboveThresholdMs": 0.9274490000025253,
+              "insufficientMs": 1.1379890000025625,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 20,
+              "generationMs": 1.4728089999989606,
+              "exactThresholdMs": 0.6072570000033011,
+              "aboveThresholdMs": 1.752345000000787,
+              "insufficientMs": 0.7575839999990421,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 21,
+              "generationMs": 1.0114259999973,
+              "exactThresholdMs": 0.9695509999946808,
+              "aboveThresholdMs": 1.5819889999984298,
+              "insufficientMs": 0.3815099999992526,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 22,
+              "generationMs": 1.2153120000002673,
+              "exactThresholdMs": 1.5812850000002072,
+              "aboveThresholdMs": 0.8951010000018869,
+              "insufficientMs": 0.3595649999988382,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 23,
+              "generationMs": 1.8888280000028317,
+              "exactThresholdMs": 0.7463199999983772,
+              "aboveThresholdMs": 0.8271230000027572,
+              "insufficientMs": 0.5173680000007153,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 24,
+              "generationMs": 1.8779470000008587,
+              "exactThresholdMs": 0.6013020000027609,
+              "aboveThresholdMs": 1.0213349999976344,
+              "insufficientMs": 1.0594180000043707,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 25,
+              "generationMs": 1.0652500000069267,
+              "exactThresholdMs": 0.5928799999965122,
+              "aboveThresholdMs": 1.7813309999983176,
+              "insufficientMs": 0.787292000000889,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 26,
+              "generationMs": 1.0105469999980414,
+              "exactThresholdMs": 1.2085730000035255,
+              "aboveThresholdMs": 1.6181920000017271,
+              "insufficientMs": 0.3800580000024638,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 27,
+              "generationMs": 1.2265599999955157,
+              "exactThresholdMs": 1.600946999998996,
+              "aboveThresholdMs": 0.820346000000427,
+              "insufficientMs": 0.3599019999965094,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 28,
+              "generationMs": 2.1442630000019562,
+              "exactThresholdMs": 0.6516350000019884,
+              "aboveThresholdMs": 0.8049519999985932,
+              "insufficientMs": 0.5210289999959059,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 29,
+              "generationMs": 1.99938999999722,
+              "exactThresholdMs": 0.6054749999966589,
+              "aboveThresholdMs": 1.3901120000009541,
+              "insufficientMs": 1.0683749999952852,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 30,
+              "generationMs": 1.0586670000047889,
+              "exactThresholdMs": 0.6041370000020834,
+              "aboveThresholdMs": 2.1575290000037057,
+              "insufficientMs": 0.612330000003567,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            }
+          ],
+          "generationStats": {
+            "mean": 1.596409400001236,
+            "median": 1.4966554999991786,
+            "min": 1.0105469999980414,
+            "max": 4.196820999997726,
+            "stddev": 0.6120195645938865,
+            "samples": 30,
+            "confidence95": {
+              "lower": 1.3678777920711243,
+              "upper": 1.824941007931348,
+              "method": "two-sided Student t interval; df=29; Cornish-Fisher t critical approximation"
+            },
+            "medianConfidence95": {
+              "lower": 1.2259984999982407,
+              "upper": 1.7882449999997334,
+              "method": "percentile bootstrap of median; 2000 resamples; deterministic LCG seed from observations"
+            }
+          },
+          "exactThresholdStats": {
+            "mean": 0.951309300000139,
+            "median": 0.7485194999972009,
+            "min": 0.5928799999965122,
+            "max": 1.7912859999996726,
+            "stddev": 0.37789440290380927,
+            "samples": 30,
+            "confidence95": {
+              "lower": 0.8102013673138647,
+              "upper": 1.0924172326864134,
+              "method": "two-sided Student t interval; df=29; Cornish-Fisher t critical approximation"
+            },
+            "medianConfidence95": {
+              "lower": 0.6611200000043027,
+              "upper": 1.0959695000019565,
+              "method": "percentile bootstrap of median; 2000 resamples; deterministic LCG seed from observations"
+            }
+          },
+          "aboveThresholdStats": {
+            "mean": 1.3598262999999862,
+            "median": 1.2520049999984622,
+            "min": 0.8049519999985932,
+            "max": 2.33292999999685,
+            "stddev": 0.4899032697382113,
+            "samples": 30,
+            "confidence95": {
+              "lower": 1.1768936154251324,
+              "upper": 1.54275898457484,
+              "method": "two-sided Student t interval; df=29; Cornish-Fisher t critical approximation"
+            },
+            "medianConfidence95": {
+              "lower": 0.9743920000000799,
+              "upper": 1.6000905000000785,
+              "method": "percentile bootstrap of median; 2000 resamples; deterministic LCG seed from observations"
+            }
+          },
+          "insufficientStats": {
+            "mean": 0.632213866666522,
+            "median": 0.49949800000104005,
+            "min": 0.3595649999988382,
+            "max": 1.4460350000008475,
+            "stddev": 0.3071908167155411,
+            "samples": 30,
+            "confidence95": {
+              "lower": 0.5175070576906506,
+              "upper": 0.7469206756423934,
+              "method": "two-sided Student t interval; df=29; Cornish-Fisher t critical approximation"
+            },
+            "medianConfidence95": {
+              "lower": 0.39060999999855994,
+              "upper": 0.733852499997738,
+              "method": "percentile bootstrap of median; 2000 resamples; deterministic LCG seed from observations"
+            }
+          },
+          "exactThresholdSuccess": {
+            "successes": 30,
+            "trials": 30,
+            "proportion": 1,
+            "confidence95": {
+              "lower": 0.886486605238548,
+              "upper": 1,
+              "method": "Wilson score interval"
+            }
+          },
+          "aboveThresholdSuccess": {
+            "successes": 30,
+            "trials": 30,
+            "proportion": 1,
+            "confidence95": {
+              "lower": 0.886486605238548,
+              "upper": 1,
+              "method": "Wilson score interval"
+            }
+          },
+          "insufficientShareFailure": {
+            "successes": 30,
+            "trials": 30,
+            "proportion": 1,
+            "confidence95": {
+              "lower": 0.886486605238548,
+              "upper": 1,
+              "method": "Wilson score interval"
+            }
+          }
+        },
+        {
+          "threshold": 2,
+          "totalShares": 5,
+          "samples": [
+            {
+              "repetition": 1,
+              "generationMs": 1.7139030000034836,
+              "exactThresholdMs": 0.6361459999970975,
+              "aboveThresholdMs": 1.4149599999946076,
+              "insufficientMs": 1.1870080000007874,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 2,
+              "generationMs": 1.3402579999965383,
+              "exactThresholdMs": 0.8664439999993192,
+              "aboveThresholdMs": 2.1133689999987837,
+              "insufficientMs": 0.3440600000030827,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 3,
+              "generationMs": 1.781543999997666,
+              "exactThresholdMs": 0.9564949999985402,
+              "aboveThresholdMs": 0.8140669999993406,
+              "insufficientMs": 0.3468379999976605,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 4,
+              "generationMs": 2.24176499999885,
+              "exactThresholdMs": 0.5904850000006263,
+              "aboveThresholdMs": 1.185166000002937,
+              "insufficientMs": 1.021600000000035,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 5,
+              "generationMs": 1.451372999996238,
+              "exactThresholdMs": 0.8206040000004577,
+              "aboveThresholdMs": 2.1707360000000335,
+              "insufficientMs": 0.3696010000057868,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 6,
+              "generationMs": 1.7921899999928428,
+              "exactThresholdMs": 0.7732149999937974,
+              "aboveThresholdMs": 0.8239950000061071,
+              "insufficientMs": 0.353635999999824,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 7,
+              "generationMs": 2.5205690000002505,
+              "exactThresholdMs": 0.5902490000007674,
+              "aboveThresholdMs": 1.2193800000022748,
+              "insufficientMs": 0.9168669999999111,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 8,
+              "generationMs": 1.5272800000020652,
+              "exactThresholdMs": 0.9354920000041602,
+              "aboveThresholdMs": 1.609971999998379,
+              "insufficientMs": 0.36270499999955064,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 9,
+              "generationMs": 1.8236420000030193,
+              "exactThresholdMs": 1.1298939999978757,
+              "aboveThresholdMs": 0.8426479999980074,
+              "insufficientMs": 0.37044500000047265,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 10,
+              "generationMs": 2.3148010000004433,
+              "exactThresholdMs": 0.6081730000005336,
+              "aboveThresholdMs": 1.3158890000049723,
+              "insufficientMs": 0.9715489999944111,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 11,
+              "generationMs": 1.3877340000035474,
+              "exactThresholdMs": 0.9295469999997295,
+              "aboveThresholdMs": 1.6920409999947879,
+              "insufficientMs": 0.37404200000310084,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 12,
+              "generationMs": 1.7826060000006692,
+              "exactThresholdMs": 1.2993640000058804,
+              "aboveThresholdMs": 0.8387979999970412,
+              "insufficientMs": 0.364093000003777,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 13,
+              "generationMs": 2.4175060000052326,
+              "exactThresholdMs": 0.6042810000071768,
+              "aboveThresholdMs": 1.1209230000022217,
+              "insufficientMs": 0.9576000000015483,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 14,
+              "generationMs": 1.5521989999979269,
+              "exactThresholdMs": 0.7503800000049523,
+              "aboveThresholdMs": 2.4536149999985355,
+              "insufficientMs": 0.35970500000257744,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 15,
+              "generationMs": 1.5243649999974878,
+              "exactThresholdMs": 1.5281990000003134,
+              "aboveThresholdMs": 0.8218320000014501,
+              "insufficientMs": 0.35433500000362983,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 16,
+              "generationMs": 2.324569000003976,
+              "exactThresholdMs": 0.594041999996989,
+              "aboveThresholdMs": 0.9528689999933704,
+              "insufficientMs": 1.0098540000035428,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 17,
+              "generationMs": 2.034938000004331,
+              "exactThresholdMs": 0.5972120000005816,
+              "aboveThresholdMs": 2.1308870000066236,
+              "insufficientMs": 0.5052769999965676,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 18,
+              "generationMs": 1.5180289999989327,
+              "exactThresholdMs": 1.5631739999953425,
+              "aboveThresholdMs": 0.9371650000030058,
+              "insufficientMs": 0.36514299999544164,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 19,
+              "generationMs": 2.3498859999963315,
+              "exactThresholdMs": 0.6243499999982305,
+              "aboveThresholdMs": 0.9773459999996703,
+              "insufficientMs": 0.9630309999993187,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 20,
+              "generationMs": 1.7141439999977592,
+              "exactThresholdMs": 0.5998010000039358,
+              "aboveThresholdMs": 2.111587999999756,
+              "insufficientMs": 0.38098700000409735,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 21,
+              "generationMs": 1.3326620000007097,
+              "exactThresholdMs": 1.5156740000020363,
+              "aboveThresholdMs": 0.857479999998759,
+              "insufficientMs": 0.37163699999655364,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 22,
+              "generationMs": 2.2787200000020675,
+              "exactThresholdMs": 0.645394999999553,
+              "aboveThresholdMs": 0.868945000001986,
+              "insufficientMs": 0.7380790000024717,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 23,
+              "generationMs": 2.3227960000003804,
+              "exactThresholdMs": 0.6005199999999604,
+              "aboveThresholdMs": 1.8613209999966784,
+              "insufficientMs": 0.6293949999962933,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 24,
+              "generationMs": 1.2824760000003153,
+              "exactThresholdMs": 1.4250410000022384,
+              "aboveThresholdMs": 1.4293650000035996,
+              "insufficientMs": 0.37077899999712827,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 25,
+              "generationMs": 2.0416669999976875,
+              "exactThresholdMs": 0.625344000000041,
+              "aboveThresholdMs": 0.8339579999956186,
+              "insufficientMs": 0.5071020000032149,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 26,
+              "generationMs": 2.1481849999981932,
+              "exactThresholdMs": 0.5874579999945126,
+              "aboveThresholdMs": 1.5535749999980908,
+              "insufficientMs": 0.9732980000044336,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 27,
+              "generationMs": 1.3283280000032391,
+              "exactThresholdMs": 0.989250999999058,
+              "aboveThresholdMs": 2.1658860000025015,
+              "insufficientMs": 0.3677259999967646,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 28,
+              "generationMs": 1.8543189999982133,
+              "exactThresholdMs": 0.7049609999958193,
+              "aboveThresholdMs": 0.8395390000005136,
+              "insufficientMs": 0.3568020000020624,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 29,
+              "generationMs": 2.492638999996416,
+              "exactThresholdMs": 0.5938639999949373,
+              "aboveThresholdMs": 1.3918459999986226,
+              "insufficientMs": 1.0006320000029518,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 30,
+              "generationMs": 1.2174090000044089,
+              "exactThresholdMs": 0.9466089999987162,
+              "aboveThresholdMs": 2.1733190000013565,
+              "insufficientMs": 0.3663689999957569,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            }
+          ],
+          "generationStats": {
+            "mean": 1.847083399999974,
+            "median": 1.787397999996756,
+            "min": 1.2174090000044089,
+            "max": 2.5205690000002505,
+            "stddev": 0.41314902118803204,
+            "samples": 30,
+            "confidence95": {
+              "lower": 1.6928111910886383,
+              "upper": 2.00135560891131,
+              "method": "two-sided Student t interval; df=29; Cornish-Fisher t critical approximation"
+            },
+            "medianConfidence95": {
+              "lower": 1.539739499999996,
+              "upper": 2.1383515000015905,
+              "method": "percentile bootstrap of median; 2000 resamples; deterministic LCG seed from observations"
+            }
+          },
+          "exactThresholdStats": {
+            "mean": 0.8543887999997727,
+            "median": 0.7276705000003858,
+            "min": 0.5874579999945126,
+            "max": 1.5631739999953425,
+            "stddev": 0.31868265926388095,
+            "samples": 30,
+            "confidence95": {
+              "lower": 0.7353908712499861,
+              "upper": 0.9733867287495592,
+              "method": "two-sided Student t interval; df=29; Cornish-Fisher t critical approximation"
+            },
+            "medianConfidence95": {
+              "lower": 0.6162614999993821,
+              "upper": 0.9325195000019448,
+              "method": "percentile bootstrap of median; 2000 resamples; deterministic LCG seed from observations"
+            }
+          },
+          "aboveThresholdStats": {
+            "mean": 1.3840826666666544,
+            "median": 1.2676345000036235,
+            "min": 0.8140669999993406,
+            "max": 2.4536149999985355,
+            "stddev": 0.5381920430375278,
+            "samples": 30,
+            "confidence95": {
+              "lower": 1.1831186777912786,
+              "upper": 1.5850466555420302,
+              "method": "two-sided Student t interval; df=29; Cornish-Fisher t critical approximation"
+            },
+            "medianConfidence95": {
+              "lower": 0.9450169999981881,
+              "upper": 1.581773499998235,
+              "method": "percentile bootstrap of median; 2000 resamples; deterministic LCG seed from observations"
+            }
+          },
+          "insufficientStats": {
+            "mean": 0.5853398333337585,
+            "median": 0.37283949999982724,
+            "min": 0.3440600000030827,
+            "max": 1.1870080000007874,
+            "stddev": 0.2919641037444401,
+            "samples": 30,
+            "confidence95": {
+              "lower": 0.4763187661218536,
+              "upper": 0.6943609005456634,
+              "method": "two-sided Student t interval; df=29; Cornish-Fisher t critical approximation"
+            },
+            "medianConfidence95": {
+              "lower": 0.3668470000047819,
+              "upper": 0.711984500001563,
+              "method": "percentile bootstrap of median; 2000 resamples; deterministic LCG seed from observations"
+            }
+          },
+          "exactThresholdSuccess": {
+            "successes": 30,
+            "trials": 30,
+            "proportion": 1,
+            "confidence95": {
+              "lower": 0.886486605238548,
+              "upper": 1,
+              "method": "Wilson score interval"
+            }
+          },
+          "aboveThresholdSuccess": {
+            "successes": 30,
+            "trials": 30,
+            "proportion": 1,
+            "confidence95": {
+              "lower": 0.886486605238548,
+              "upper": 1,
+              "method": "Wilson score interval"
+            }
+          },
+          "insufficientShareFailure": {
+            "successes": 30,
+            "trials": 30,
+            "proportion": 1,
+            "confidence95": {
+              "lower": 0.886486605238548,
+              "upper": 1,
+              "method": "Wilson score interval"
+            }
+          }
+        },
+        {
+          "threshold": 3,
+          "totalShares": 5,
+          "samples": [
+            {
+              "repetition": 1,
+              "generationMs": 1.6714349999965634,
+              "exactThresholdMs": 1.046465999999782,
+              "aboveThresholdMs": 2.627202000003308,
+              "insufficientMs": 0.6176930000001448,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 2,
+              "generationMs": 2.678925000000163,
+              "exactThresholdMs": 0.8410890000013751,
+              "aboveThresholdMs": 1.8108500000016647,
+              "insufficientMs": 1.5092529999965336,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 3,
+              "generationMs": 1.5428929999980028,
+              "exactThresholdMs": 2.07666700000118,
+              "aboveThresholdMs": 1.0428329999995185,
+              "insufficientMs": 1.031435999997484,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 4,
+              "generationMs": 2.430311999996775,
+              "exactThresholdMs": 0.9803170000013779,
+              "aboveThresholdMs": 2.062412999999651,
+              "insufficientMs": 0.5676529999982449,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 5,
+              "generationMs": 2.5186659999963013,
+              "exactThresholdMs": 0.8618759999953909,
+              "aboveThresholdMs": 1.6798990000024787,
+              "insufficientMs": 1.2512550000028568,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 6,
+              "generationMs": 1.5618960000065272,
+              "exactThresholdMs": 1.8988709999975981,
+              "aboveThresholdMs": 1.0378899999996065,
+              "insufficientMs": 0.8242219999956433,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 7,
+              "generationMs": 2.582789000000048,
+              "exactThresholdMs": 1.051872000003641,
+              "aboveThresholdMs": 2.6851729999980307,
+              "insufficientMs": 0.5778569999965839,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 8,
+              "generationMs": 2.4288270000033663,
+              "exactThresholdMs": 0.829727999996976,
+              "aboveThresholdMs": 1.7336890000005951,
+              "insufficientMs": 1.7367549999980838,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 9,
+              "generationMs": 1.4246469999998226,
+              "exactThresholdMs": 2.0684390000023996,
+              "aboveThresholdMs": 1.074456000002101,
+              "insufficientMs": 0.9704359999959706,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 10,
+              "generationMs": 2.2430890000032377,
+              "exactThresholdMs": 1.0332220000054804,
+              "aboveThresholdMs": 2.208933000001707,
+              "insufficientMs": 0.5907420000003185,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 11,
+              "generationMs": 2.482750000002852,
+              "exactThresholdMs": 0.8434980000020005,
+              "aboveThresholdMs": 1.9723050000029616,
+              "insufficientMs": 1.4451359999948181,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 12,
+              "generationMs": 1.6000130000029458,
+              "exactThresholdMs": 2.18163800000184,
+              "aboveThresholdMs": 1.0594090000013239,
+              "insufficientMs": 1.2478989999945043,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 13,
+              "generationMs": 1.9051069999986794,
+              "exactThresholdMs": 1.0743210000000545,
+              "aboveThresholdMs": 2.4103630000026897,
+              "insufficientMs": 0.5857890000042971,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 14,
+              "generationMs": 2.675358000000415,
+              "exactThresholdMs": 0.8418799999999464,
+              "aboveThresholdMs": 1.8041840000005323,
+              "insufficientMs": 1.2255399999994552,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 15,
+              "generationMs": 1.6497739999977057,
+              "exactThresholdMs": 2.433654000000388,
+              "aboveThresholdMs": 1.0771959999983665,
+              "insufficientMs": 1.1352100000003702,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 16,
+              "generationMs": 2.1472260000009555,
+              "exactThresholdMs": 0.8373580000043148,
+              "aboveThresholdMs": 1.0272110000005341,
+              "insufficientMs": 0.5962500000023283,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 17,
+              "generationMs": 2.7314489999989746,
+              "exactThresholdMs": 1.5723740000030375,
+              "aboveThresholdMs": 1.1307760000054259,
+              "insufficientMs": 0.5978269999977783,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 18,
+              "generationMs": 1.7768070000020089,
+              "exactThresholdMs": 2.330313999998907,
+              "aboveThresholdMs": 2.1663209999969695,
+              "insufficientMs": 0.6090259999982663,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 19,
+              "generationMs": 1.4756019999986165,
+              "exactThresholdMs": 1.2118810000029043,
+              "aboveThresholdMs": 3.057582999994338,
+              "insufficientMs": 1.022251000002143,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 20,
+              "generationMs": 1.4840839999960735,
+              "exactThresholdMs": 0.8387240000010934,
+              "aboveThresholdMs": 2.1185829999958514,
+              "insufficientMs": 1.64654999999766,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 21,
+              "generationMs": 1.5648389999987558,
+              "exactThresholdMs": 0.816703000004054,
+              "aboveThresholdMs": 1.0673960000058287,
+              "insufficientMs": 1.4604590000017197,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 22,
+              "generationMs": 3.868241999996826,
+              "exactThresholdMs": 0.8606369999979506,
+              "aboveThresholdMs": 1.0530169999983627,
+              "insufficientMs": 0.5711889999947743,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 23,
+              "generationMs": 2.179028999998991,
+              "exactThresholdMs": 2.2702579999968293,
+              "aboveThresholdMs": 1.051009000002523,
+              "insufficientMs": 0.570134000001417,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 24,
+              "generationMs": 2.2800900000002002,
+              "exactThresholdMs": 2.3758080000043265,
+              "aboveThresholdMs": 1.2297969999999623,
+              "insufficientMs": 0.5893450000003213,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 25,
+              "generationMs": 1.456229000003077,
+              "exactThresholdMs": 1.755342999997083,
+              "aboveThresholdMs": 2.9202650000006543,
+              "insufficientMs": 1.2525219999952242,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 26,
+              "generationMs": 1.5081190000055358,
+              "exactThresholdMs": 0.9503489999988233,
+              "aboveThresholdMs": 2.2901009999986854,
+              "insufficientMs": 1.5192469999965397,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 27,
+              "generationMs": 1.729401999997208,
+              "exactThresholdMs": 1.0175420000014128,
+              "aboveThresholdMs": 1.0653989999991609,
+              "insufficientMs": 1.4995769999950426,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 28,
+              "generationMs": 3.230130999996618,
+              "exactThresholdMs": 1.0305940000034752,
+              "aboveThresholdMs": 1.0427899999995134,
+              "insufficientMs": 0.5940879999980098,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 29,
+              "generationMs": 3.3454799999963143,
+              "exactThresholdMs": 1.3283280000032391,
+              "aboveThresholdMs": 1.237263000002713,
+              "insufficientMs": 0.5857239999968442,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 30,
+              "generationMs": 1.8295839999991586,
+              "exactThresholdMs": 2.1530629999979283,
+              "aboveThresholdMs": 2.0443950000044424,
+              "insufficientMs": 0.5973270000031334,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            }
+          ],
+          "generationStats": {
+            "mean": 2.1334264666664238,
+            "median": 2.0261664999998175,
+            "min": 1.4246469999998226,
+            "max": 3.868241999996826,
+            "stddev": 0.6347861707786291,
+            "samples": 30,
+            "confidence95": {
+              "lower": 1.8963936776965142,
+              "upper": 2.3704592556363333,
+              "method": "two-sided Student t interval; df=29; Cornish-Fisher t critical approximation"
+            },
+            "medianConfidence95": {
+              "lower": 1.6606044999971346,
+              "upper": 2.4295695000000705,
+              "method": "percentile bootstrap of median; 2000 resamples; deterministic LCG seed from observations"
+            }
+          },
+          "exactThresholdStats": {
+            "mean": 1.3804271333341602,
+            "median": 1.0491690000017115,
+            "min": 0.816703000004054,
+            "max": 2.433654000000388,
+            "stddev": 0.5907051705153541,
+            "samples": 30,
+            "confidence95": {
+              "lower": 1.1598544421325607,
+              "upper": 1.6009998245357597,
+              "method": "two-sided Student t interval; df=29; Cornish-Fisher t critical approximation"
+            },
+            "medianConfidence95": {
+              "lower": 0.9653330000001006,
+              "upper": 1.7356225000003178,
+              "method": "percentile bootstrap of median; 2000 resamples; deterministic LCG seed from observations"
+            }
+          },
+          "aboveThresholdStats": {
+            "mean": 1.69295670000065,
+            "median": 1.706794000001537,
+            "min": 1.0272110000005341,
+            "max": 3.057582999994338,
+            "stddev": 0.6528570143407668,
+            "samples": 30,
+            "confidence95": {
+              "lower": 1.4491761546274802,
+              "upper": 1.9367372453738199,
+              "method": "two-sided Student t interval; df=29; Cornish-Fisher t critical approximation"
+            },
+            "medianConfidence95": {
+              "lower": 1.0758260000002338,
+              "upper": 2.053404000002047,
+              "method": "percentile bootstrap of median; 2000 resamples; deterministic LCG seed from observations"
+            }
+          },
+          "insufficientStats": {
+            "mean": 0.9676130666652171,
+            "median": 0.897328999995807,
+            "min": 0.5676529999982449,
+            "max": 1.7367549999980838,
+            "stddev": 0.4056764785767439,
+            "samples": 30,
+            "confidence95": {
+              "lower": 0.8161311479293549,
+              "upper": 1.1190949854010792,
+              "method": "two-sided Student t interval; df=29; Cornish-Fisher t critical approximation"
+            },
+            "medianConfidence95": {
+              "lower": 0.5967885000027309,
+              "upper": 1.2255399999994552,
+              "method": "percentile bootstrap of median; 2000 resamples; deterministic LCG seed from observations"
+            }
+          },
+          "exactThresholdSuccess": {
+            "successes": 30,
+            "trials": 30,
+            "proportion": 1,
+            "confidence95": {
+              "lower": 0.886486605238548,
+              "upper": 1,
+              "method": "Wilson score interval"
+            }
+          },
+          "aboveThresholdSuccess": {
+            "successes": 30,
+            "trials": 30,
+            "proportion": 1,
+            "confidence95": {
+              "lower": 0.886486605238548,
+              "upper": 1,
+              "method": "Wilson score interval"
+            }
+          },
+          "insufficientShareFailure": {
+            "successes": 30,
+            "trials": 30,
+            "proportion": 1,
+            "confidence95": {
+              "lower": 0.886486605238548,
+              "upper": 1,
+              "method": "Wilson score interval"
+            }
+          }
+        },
+        {
+          "threshold": 3,
+          "totalShares": 7,
+          "samples": [
+            {
+              "repetition": 1,
+              "generationMs": 2.1970579999979236,
+              "exactThresholdMs": 0.9033500000005006,
+              "aboveThresholdMs": 1.980665000002773,
+              "insufficientMs": 1.4348879999961355,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 2,
+              "generationMs": 1.861298000003444,
+              "exactThresholdMs": 0.9921109999995679,
+              "aboveThresholdMs": 1.0564089999970747,
+              "insufficientMs": 1.7417589999968186,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 3,
+              "generationMs": 3.070357000004151,
+              "exactThresholdMs": 0.952315999995335,
+              "aboveThresholdMs": 1.0065529999992577,
+              "insufficientMs": 0.56073699999979,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 4,
+              "generationMs": 4.080305000003136,
+              "exactThresholdMs": 1.0017860000007204,
+              "aboveThresholdMs": 1.0193250000011176,
+              "insufficientMs": 0.563361000000441,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 5,
+              "generationMs": 3.6741670000046724,
+              "exactThresholdMs": 0.8879030000025523,
+              "aboveThresholdMs": 1.1470980000012787,
+              "insufficientMs": 0.571432000004279,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 6,
+              "generationMs": 3.1266209999957937,
+              "exactThresholdMs": 1.6800640000001295,
+              "aboveThresholdMs": 1.3094230000060634,
+              "insufficientMs": 0.6101570000028005,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 7,
+              "generationMs": 2.1878989999968326,
+              "exactThresholdMs": 2.132790000003297,
+              "aboveThresholdMs": 2.119595999996818,
+              "insufficientMs": 0.5867609999986598,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 8,
+              "generationMs": 1.7125549999982468,
+              "exactThresholdMs": 1.955604000002495,
+              "aboveThresholdMs": 2.8974640000014915,
+              "insufficientMs": 0.6099959999992279,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 9,
+              "generationMs": 1.7028470000004745,
+              "exactThresholdMs": 1.081691999999748,
+              "aboveThresholdMs": 2.8819780000048922,
+              "insufficientMs": 1.3179000000018277,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 10,
+              "generationMs": 1.6929070000041975,
+              "exactThresholdMs": 0.8186619999978575,
+              "aboveThresholdMs": 2.2023319999934756,
+              "insufficientMs": 1.6704119999994873,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 11,
+              "generationMs": 1.9738829999987502,
+              "exactThresholdMs": 0.8120390000040061,
+              "aboveThresholdMs": 1.260232000000542,
+              "insufficientMs": 1.8064420000009704,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 12,
+              "generationMs": 2.8297660000025644,
+              "exactThresholdMs": 0.8261459999994258,
+              "aboveThresholdMs": 1.033791999994719,
+              "insufficientMs": 0.8676239999986137,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 13,
+              "generationMs": 4.2287299999952666,
+              "exactThresholdMs": 0.8633550000013201,
+              "aboveThresholdMs": 1.0486999999993714,
+              "insufficientMs": 0.5950789999988046,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 14,
+              "generationMs": 3.9391900000046007,
+              "exactThresholdMs": 0.8764139999984764,
+              "aboveThresholdMs": 1.058511000002909,
+              "insufficientMs": 0.5843890000032843,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 15,
+              "generationMs": 2.9184580000001006,
+              "exactThresholdMs": 1.7792479999989155,
+              "aboveThresholdMs": 1.0737729999964358,
+              "insufficientMs": 0.5931560000026366,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 16,
+              "generationMs": 2.085723999996844,
+              "exactThresholdMs": 2.311115999997128,
+              "aboveThresholdMs": 2.1855179999984102,
+              "insufficientMs": 0.5932670000038343,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 17,
+              "generationMs": 1.7953919999999925,
+              "exactThresholdMs": 2.1503319999974337,
+              "aboveThresholdMs": 2.7273540000023786,
+              "insufficientMs": 0.6533330000020214,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 18,
+              "generationMs": 1.9893490000031306,
+              "exactThresholdMs": 1.100135999993654,
+              "aboveThresholdMs": 2.958677999995416,
+              "insufficientMs": 1.5242339999967953,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 19,
+              "generationMs": 1.9080329999997048,
+              "exactThresholdMs": 0.8431950000012876,
+              "aboveThresholdMs": 2.4444800000055693,
+              "insufficientMs": 1.4840510000067297,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 20,
+              "generationMs": 2.354138000002422,
+              "exactThresholdMs": 0.8615950000021257,
+              "aboveThresholdMs": 1.6418919999996433,
+              "insufficientMs": 1.5783470000023954,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 21,
+              "generationMs": 2.831670999999915,
+              "exactThresholdMs": 0.8410980000044219,
+              "aboveThresholdMs": 1.045858000004955,
+              "insufficientMs": 1.4064779999971506,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 22,
+              "generationMs": 3.2708549999952083,
+              "exactThresholdMs": 0.8511250000010477,
+              "aboveThresholdMs": 1.0380810000060592,
+              "insufficientMs": 0.5695569999952568,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 23,
+              "generationMs": 4.166074000000663,
+              "exactThresholdMs": 0.8807630000010249,
+              "aboveThresholdMs": 1.0572319999992033,
+              "insufficientMs": 0.5845479999989038,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 24,
+              "generationMs": 3.3538100000005215,
+              "exactThresholdMs": 1.1588850000043749,
+              "aboveThresholdMs": 1.0439679999981308,
+              "insufficientMs": 0.5710410000028787,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 25,
+              "generationMs": 2.5647140000000945,
+              "exactThresholdMs": 2.0154750000001513,
+              "aboveThresholdMs": 1.1701289999982691,
+              "insufficientMs": 0.6059650000024703,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 26,
+              "generationMs": 1.7259619999967981,
+              "exactThresholdMs": 2.395275999995647,
+              "aboveThresholdMs": 2.3089580000014394,
+              "insufficientMs": 0.6027899999971851,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 27,
+              "generationMs": 1.7053809999997611,
+              "exactThresholdMs": 1.6000349999958416,
+              "aboveThresholdMs": 2.7690999999977066,
+              "insufficientMs": 0.6065830000006827,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 28,
+              "generationMs": 1.7106060000005527,
+              "exactThresholdMs": 0.8063600000023143,
+              "aboveThresholdMs": 2.7831349999978556,
+              "insufficientMs": 1.6954550000009476,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 29,
+              "generationMs": 1.7923420000006445,
+              "exactThresholdMs": 0.8763030000045546,
+              "aboveThresholdMs": 1.7479109999985667,
+              "insufficientMs": 1.8021999999982654,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 30,
+              "generationMs": 2.1527549999955227,
+              "exactThresholdMs": 0.8283670000018901,
+              "aboveThresholdMs": 1.0526589999935823,
+              "insufficientMs": 1.5628379999980098,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            }
+          ],
+          "generationStats": {
+            "mean": 2.5534282333333977,
+            "median": 2.192478499997378,
+            "min": 1.6929070000041975,
+            "max": 4.2287299999952666,
+            "stddev": 0.8432623187279954,
+            "samples": 30,
+            "confidence95": {
+              "lower": 2.238549257636502,
+              "upper": 2.8683072090302937,
+              "method": "two-sided Student t interval; df=29; Cornish-Fisher t critical approximation"
+            },
+            "medianConfidence95": {
+              "lower": 1.9409579999992275,
+              "upper": 2.8750645000000077,
+              "method": "percentile bootstrap of median; 2000 resamples; deterministic LCG seed from observations"
+            }
+          },
+          "exactThresholdStats": {
+            "mean": 1.2361180333335748,
+            "median": 0.9278329999979178,
+            "min": 0.8063600000023143,
+            "max": 2.395275999995647,
+            "stddev": 0.536915689064729,
+            "samples": 30,
+            "confidence95": {
+              "lower": 1.0356306423360548,
+              "upper": 1.4366054243310948,
+              "method": "two-sided Student t interval; df=29; Cornish-Fisher t critical approximation"
+            },
+            "medianConfidence95": {
+              "lower": 0.8633550000013201,
+              "upper": 1.1295104999990144,
+              "method": "percentile bootstrap of median; 2000 resamples; deterministic LCG seed from observations"
+            }
+          },
+          "aboveThresholdStats": {
+            "mean": 1.7023601333331801,
+            "median": 1.2848275000033027,
+            "min": 1.0065529999992577,
+            "max": 2.958677999995416,
+            "stddev": 0.7322962550900282,
+            "samples": 30,
+            "confidence95": {
+              "lower": 1.4289165208434838,
+              "upper": 1.9758037458228765,
+              "method": "two-sided Student t interval; df=29; Cornish-Fisher t critical approximation"
+            },
+            "medianConfidence95": {
+              "lower": 1.0578715000010561,
+              "upper": 2.152556999997614,
+              "method": "percentile bootstrap of median; 2000 resamples; deterministic LCG seed from observations"
+            }
+          },
+          "insufficientStats": {
+            "mean": 0.9984926666669102,
+            "median": 0.6100765000010142,
+            "min": 0.56073699999979,
+            "max": 1.8064420000009704,
+            "stddev": 0.5000037320006386,
+            "samples": 30,
+            "confidence95": {
+              "lower": 0.8117884116795949,
+              "upper": 1.1851969216542255,
+              "method": "two-sided Student t interval; df=29; Cornish-Fisher t critical approximation"
+            },
+            "medianConfidence95": {
+              "lower": 0.5941730000013195,
+              "upper": 1.420682999996643,
+              "method": "percentile bootstrap of median; 2000 resamples; deterministic LCG seed from observations"
+            }
+          },
+          "exactThresholdSuccess": {
+            "successes": 30,
+            "trials": 30,
+            "proportion": 1,
+            "confidence95": {
+              "lower": 0.886486605238548,
+              "upper": 1,
+              "method": "Wilson score interval"
+            }
+          },
+          "aboveThresholdSuccess": {
+            "successes": 30,
+            "trials": 30,
+            "proportion": 1,
+            "confidence95": {
+              "lower": 0.886486605238548,
+              "upper": 1,
+              "method": "Wilson score interval"
+            }
+          },
+          "insufficientShareFailure": {
+            "successes": 30,
+            "trials": 30,
+            "proportion": 1,
+            "confidence95": {
+              "lower": 0.886486605238548,
+              "upper": 1,
+              "method": "Wilson score interval"
+            }
+          }
+        },
+        {
+          "threshold": 4,
+          "totalShares": 7,
+          "samples": [
+            {
+              "repetition": 1,
+              "generationMs": 2.844636999994691,
+              "exactThresholdMs": 1.1565589999954682,
+              "aboveThresholdMs": 1.3197249999939231,
+              "insufficientMs": 0.8399510000017472,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 2,
+              "generationMs": 4.109913000000233,
+              "exactThresholdMs": 1.0851350000011735,
+              "aboveThresholdMs": 1.2923460000019986,
+              "insufficientMs": 0.8084380000000237,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 3,
+              "generationMs": 4.232926000004227,
+              "exactThresholdMs": 1.0770029999985127,
+              "aboveThresholdMs": 1.2444830000022193,
+              "insufficientMs": 1.2018339999995078,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 4,
+              "generationMs": 3.9947460000039428,
+              "exactThresholdMs": 1.0336060000045109,
+              "aboveThresholdMs": 1.2340350000013132,
+              "insufficientMs": 1.6935099999973318,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 5,
+              "generationMs": 3.5701029999981984,
+              "exactThresholdMs": 1.0296349999989616,
+              "aboveThresholdMs": 1.2301470000020345,
+              "insufficientMs": 2.1521690000008675,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 6,
+              "generationMs": 3.0668119999972987,
+              "exactThresholdMs": 1.0205619999978808,
+              "aboveThresholdMs": 1.8668369999941206,
+              "insufficientMs": 2.080633999998099,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 7,
+              "generationMs": 2.5817279999973834,
+              "exactThresholdMs": 1.0108689999979106,
+              "aboveThresholdMs": 2.3775129999994533,
+              "insufficientMs": 2.104859999999462,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 8,
+              "generationMs": 2.3818150000006426,
+              "exactThresholdMs": 1.0068650000030175,
+              "aboveThresholdMs": 3.1624159999992116,
+              "insufficientMs": 2.014275000001362,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 9,
+              "generationMs": 1.905413000000408,
+              "exactThresholdMs": 1.0243520000003628,
+              "aboveThresholdMs": 3.684140999997908,
+              "insufficientMs": 1.4948090000034426,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 10,
+              "generationMs": 1.9710759999943548,
+              "exactThresholdMs": 1.7722849999991013,
+              "aboveThresholdMs": 3.4530119999981252,
+              "insufficientMs": 0.8390050000016345,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 11,
+              "generationMs": 2.0074019999956363,
+              "exactThresholdMs": 2.409236999999848,
+              "aboveThresholdMs": 3.9185269999943557,
+              "insufficientMs": 0.824149000000034,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 12,
+              "generationMs": 1.950419000000693,
+              "exactThresholdMs": 2.5778619999982766,
+              "aboveThresholdMs": 2.8090620000002673,
+              "insufficientMs": 0.8249979999964125,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 13,
+              "generationMs": 2.3327209999988554,
+              "exactThresholdMs": 2.7953809999962687,
+              "aboveThresholdMs": 1.8579519999984768,
+              "insufficientMs": 0.8355850000007194,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 14,
+              "generationMs": 2.9042199999967124,
+              "exactThresholdMs": 2.558791999996174,
+              "aboveThresholdMs": 1.2971140000008745,
+              "insufficientMs": 0.813599000000977,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 15,
+              "generationMs": 3.450392999999167,
+              "exactThresholdMs": 1.1218900000021677,
+              "aboveThresholdMs": 1.303393000001961,
+              "insufficientMs": 0.8264239999989513,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 16,
+              "generationMs": 3.994090000000142,
+              "exactThresholdMs": 1.107265999999072,
+              "aboveThresholdMs": 1.3016420000058133,
+              "insufficientMs": 0.8195819999964442,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 17,
+              "generationMs": 4.5928899999998976,
+              "exactThresholdMs": 1.0813950000010664,
+              "aboveThresholdMs": 1.2619310000009136,
+              "insufficientMs": 1.2895919999937178,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 18,
+              "generationMs": 4.052726000001712,
+              "exactThresholdMs": 1.062011000001803,
+              "aboveThresholdMs": 1.2621959999960382,
+              "insufficientMs": 1.8182860000015353,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 19,
+              "generationMs": 3.335661999997683,
+              "exactThresholdMs": 1.0411440000025323,
+              "aboveThresholdMs": 1.249775000003865,
+              "insufficientMs": 2.3553179999944405,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 20,
+              "generationMs": 2.8439670000007027,
+              "exactThresholdMs": 1.023973000003025,
+              "aboveThresholdMs": 2.135970000002999,
+              "insufficientMs": 2.0569289999984903,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 21,
+              "generationMs": 2.3952960000024177,
+              "exactThresholdMs": 1.0130280000012135,
+              "aboveThresholdMs": 2.6390039999969304,
+              "insufficientMs": 2.0621070000051986,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 22,
+              "generationMs": 2.2488630000007106,
+              "exactThresholdMs": 1.0397759999978007,
+              "aboveThresholdMs": 3.326981000005617,
+              "insufficientMs": 2.003186000001733,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 23,
+              "generationMs": 1.9723660000017844,
+              "exactThresholdMs": 1.4855999999999767,
+              "aboveThresholdMs": 3.77212999999756,
+              "insufficientMs": 1.4096100000024308,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 24,
+              "generationMs": 1.958715000000666,
+              "exactThresholdMs": 2.3007769999967422,
+              "aboveThresholdMs": 3.158196999997017,
+              "insufficientMs": 0.8535259999989648,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 25,
+              "generationMs": 2.0011460000023362,
+              "exactThresholdMs": 2.873109000000113,
+              "aboveThresholdMs": 3.1651349999956437,
+              "insufficientMs": 0.8018750000046566,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 26,
+              "generationMs": 2.288775999993959,
+              "exactThresholdMs": 2.6905879999976605,
+              "aboveThresholdMs": 1.3578599999964354,
+              "insufficientMs": 0.7944209999986924,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 27,
+              "generationMs": 2.842784999993455,
+              "exactThresholdMs": 1.9385499999989406,
+              "aboveThresholdMs": 1.2886690000013914,
+              "insufficientMs": 0.8163970000023255,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 28,
+              "generationMs": 3.6538710000022547,
+              "exactThresholdMs": 1.1504120000026887,
+              "aboveThresholdMs": 1.3105330000034883,
+              "insufficientMs": 0.8161370000016177,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 29,
+              "generationMs": 4.061313999998674,
+              "exactThresholdMs": 1.1042149999993853,
+              "aboveThresholdMs": 1.3190670000039972,
+              "insufficientMs": 1.0897800000020652,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 30,
+              "generationMs": 4.22899000000325,
+              "exactThresholdMs": 1.0829420000009122,
+              "aboveThresholdMs": 1.3025249999991502,
+              "insufficientMs": 1.5852359999989858,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            }
+          ],
+          "generationStats": {
+            "mean": 2.9925260333327364,
+            "median": 2.844301999997697,
+            "min": 1.905413000000408,
+            "max": 4.5928899999998976,
+            "stddev": 0.8726713393592768,
+            "samples": 30,
+            "confidence95": {
+              "lower": 2.666665561028005,
+              "upper": 3.3183865056374677,
+              "method": "two-sided Student t interval; df=29; Cornish-Fisher t critical approximation"
+            },
+            "medianConfidence95": {
+              "lower": 2.357267999999749,
+              "upper": 3.5102479999986826,
+              "method": "percentile bootstrap of median; 2000 resamples; deterministic LCG seed from observations"
+            }
+          },
+          "exactThresholdStats": {
+            "mean": 1.4891606333330856,
+            "median": 1.0946750000002794,
+            "min": 1.0068650000030175,
+            "max": 2.873109000000113,
+            "stddev": 0.665513190564689,
+            "samples": 30,
+            "confidence95": {
+              "lower": 1.2406541993282034,
+              "upper": 1.7376670673379677,
+              "method": "two-sided Student t interval; df=29; Cornish-Fisher t critical approximation"
+            },
+            "medianConfidence95": {
+              "lower": 1.0515775000021677,
+              "upper": 1.4644219999972847,
+              "method": "percentile bootstrap of median; 2000 resamples; deterministic LCG seed from observations"
+            }
+          },
+          "aboveThresholdStats": {
+            "mean": 2.06341059999977,
+            "median": 1.3387924999951792,
+            "min": 1.2301470000020345,
+            "max": 3.9185269999943557,
+            "stddev": 0.9630686001330596,
+            "samples": 30,
+            "confidence95": {
+              "lower": 1.7037952731899897,
+              "upper": 2.4230259268095504,
+              "method": "two-sided Student t interval; df=29; Cornish-Fisher t critical approximation"
+            },
+            "medianConfidence95": {
+              "lower": 1.3020835000024817,
+              "upper": 2.508258499998192,
+              "method": "percentile bootstrap of median; 2000 resamples; deterministic LCG seed from observations"
+            }
+          },
+          "insufficientStats": {
+            "mean": 1.3308740666667291,
+            "median": 1.1458070000007865,
+            "min": 0.7944209999986924,
+            "max": 2.3553179999944405,
+            "stddev": 0.5580721967471237,
+            "samples": 30,
+            "confidence95": {
+              "lower": 1.1224867146245787,
+              "upper": 1.5392614187088796,
+              "method": "two-sided Student t interval; df=29; Cornish-Fisher t critical approximation"
+            },
+            "medianConfidence95": {
+              "lower": 0.830291499998566,
+              "upper": 1.6393729999981588,
+              "method": "percentile bootstrap of median; 2000 resamples; deterministic LCG seed from observations"
+            }
+          },
+          "exactThresholdSuccess": {
+            "successes": 30,
+            "trials": 30,
+            "proportion": 1,
+            "confidence95": {
+              "lower": 0.886486605238548,
+              "upper": 1,
+              "method": "Wilson score interval"
+            }
+          },
+          "aboveThresholdSuccess": {
+            "successes": 30,
+            "trials": 30,
+            "proportion": 1,
+            "confidence95": {
+              "lower": 0.886486605238548,
+              "upper": 1,
+              "method": "Wilson score interval"
+            }
+          },
+          "insufficientShareFailure": {
+            "successes": 30,
+            "trials": 30,
+            "proportion": 1,
+            "confidence95": {
+              "lower": 0.886486605238548,
+              "upper": 1,
+              "method": "Wilson score interval"
+            }
+          }
+        },
+        {
+          "threshold": 5,
+          "totalShares": 10,
+          "samples": [
+            {
+              "repetition": 1,
+              "generationMs": 3.353689999996277,
+              "exactThresholdMs": 1.34138100000564,
+              "aboveThresholdMs": 1.5254170000043814,
+              "insufficientMs": 2.3813609999997425,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 2,
+              "generationMs": 3.979191999998875,
+              "exactThresholdMs": 1.2467459999970743,
+              "aboveThresholdMs": 3.5040549999976065,
+              "insufficientMs": 1.9487930000032065,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 3,
+              "generationMs": 2.5505469999989145,
+              "exactThresholdMs": 3.4367379999966943,
+              "aboveThresholdMs": 2.0780790000062552,
+              "insufficientMs": 0.9978580000024522,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 4,
+              "generationMs": 4.836480999998457,
+              "exactThresholdMs": 1.2897560000055819,
+              "aboveThresholdMs": 1.471903999998176,
+              "insufficientMs": 2.7349390000017593,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 5,
+              "generationMs": 3.3341809999983525,
+              "exactThresholdMs": 1.2893560000011348,
+              "aboveThresholdMs": 4.115347000006295,
+              "insufficientMs": 1.4754119999997783,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 6,
+              "generationMs": 2.9747110000025714,
+              "exactThresholdMs": 3.410971999997855,
+              "aboveThresholdMs": 1.5141880000010133,
+              "insufficientMs": 1.0066220000007888,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 7,
+              "generationMs": 5.123481000002357,
+              "exactThresholdMs": 1.301180000002205,
+              "aboveThresholdMs": 1.9623670000000857,
+              "insufficientMs": 3.293026999999711,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 8,
+              "generationMs": 3.201504999997269,
+              "exactThresholdMs": 2.0457119999991846,
+              "aboveThresholdMs": 3.49261000000115,
+              "insufficientMs": 1.0433059999995749,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 9,
+              "generationMs": 3.4686299999957555,
+              "exactThresholdMs": 1.926885000000766,
+              "aboveThresholdMs": 1.507623000004969,
+              "insufficientMs": 1.074014999998326,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 10,
+              "generationMs": 5.488880000004428,
+              "exactThresholdMs": 1.3271649999951478,
+              "aboveThresholdMs": 2.182847000003676,
+              "insufficientMs": 2.6535860000003595,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 11,
+              "generationMs": 3.049827999995614,
+              "exactThresholdMs": 1.9789720000044326,
+              "aboveThresholdMs": 3.875141000004078,
+              "insufficientMs": 1.074004000001878,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 12,
+              "generationMs": 3.6209799999996903,
+              "exactThresholdMs": 1.846032000001287,
+              "aboveThresholdMs": 1.5318220000044676,
+              "insufficientMs": 1.0627969999986817,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 13,
+              "generationMs": 5.375922999999602,
+              "exactThresholdMs": 1.3304620000053546,
+              "aboveThresholdMs": 2.542846999996982,
+              "insufficientMs": 2.806032000000414,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 14,
+              "generationMs": 2.630517999998119,
+              "exactThresholdMs": 2.3398490000035963,
+              "aboveThresholdMs": 2.8782849999988684,
+              "insufficientMs": 1.0400319999971543,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 15,
+              "generationMs": 3.7890100000004168,
+              "exactThresholdMs": 1.3551050000023679,
+              "aboveThresholdMs": 1.525166999999783,
+              "insufficientMs": 1.4189820000028703,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 16,
+              "generationMs": 4.823957000000519,
+              "exactThresholdMs": 1.3200989999968442,
+              "aboveThresholdMs": 2.7956560000020545,
+              "insufficientMs": 2.5931500000006054,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 17,
+              "generationMs": 2.613438000000315,
+              "exactThresholdMs": 2.6371240000007674,
+              "aboveThresholdMs": 2.6011250000010477,
+              "insufficientMs": 1.0176419999988866,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 18,
+              "generationMs": 3.9727750000020023,
+              "exactThresholdMs": 1.304745000001276,
+              "aboveThresholdMs": 1.4923669999989215,
+              "insufficientMs": 1.5388099999981932,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 19,
+              "generationMs": 4.731847999995807,
+              "exactThresholdMs": 1.3023570000004838,
+              "aboveThresholdMs": 3.084159999998519,
+              "insufficientMs": 2.540636000005179,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 20,
+              "generationMs": 2.611765000001469,
+              "exactThresholdMs": 3.007656000001589,
+              "aboveThresholdMs": 2.4181030000036117,
+              "insufficientMs": 1.0332419999976992,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 21,
+              "generationMs": 4.176361999998335,
+              "exactThresholdMs": 1.2960910000037984,
+              "aboveThresholdMs": 1.495386000002327,
+              "insufficientMs": 1.7041920000046957,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 22,
+              "generationMs": 4.179950000005192,
+              "exactThresholdMs": 1.2734080000009271,
+              "aboveThresholdMs": 3.3330040000000736,
+              "insufficientMs": 1.997361000001547,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 23,
+              "generationMs": 2.583238999999594,
+              "exactThresholdMs": 3.299847000002046,
+              "aboveThresholdMs": 2.399942000003648,
+              "insufficientMs": 1.049018999998225,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 24,
+              "generationMs": 4.688276000000769,
+              "exactThresholdMs": 1.4881509999977425,
+              "aboveThresholdMs": 1.5761300000012852,
+              "insufficientMs": 2.615578999997524,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 25,
+              "generationMs": 4.635309000004781,
+              "exactThresholdMs": 1.3224449999979697,
+              "aboveThresholdMs": 3.775861000001896,
+              "insufficientMs": 1.4952940000002855,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 26,
+              "generationMs": 2.9346000000005006,
+              "exactThresholdMs": 3.5331069999956526,
+              "aboveThresholdMs": 1.564739000001282,
+              "insufficientMs": 1.0721520000006421,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 27,
+              "generationMs": 5.259907999999996,
+              "exactThresholdMs": 1.3574200000002747,
+              "aboveThresholdMs": 1.556190000002971,
+              "insufficientMs": 2.9684159999960684,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 28,
+              "generationMs": 3.6663730000000214,
+              "exactThresholdMs": 1.315044000002672,
+              "aboveThresholdMs": 4.20078499999363,
+              "insufficientMs": 1.4388170000020182,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 29,
+              "generationMs": 2.950081000002683,
+              "exactThresholdMs": 3.5125159999952302,
+              "aboveThresholdMs": 1.540722999998252,
+              "insufficientMs": 1.0365680000031716,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            },
+            {
+              "repetition": 30,
+              "generationMs": 5.11921699999948,
+              "exactThresholdMs": 1.336197999997239,
+              "aboveThresholdMs": 1.539773000004061,
+              "insufficientMs": 2.789224000000104,
+              "exactThresholdSuccess": true,
+              "aboveThresholdSuccess": true,
+              "insufficientShareFailure": true
+            }
+          ],
+          "generationStats": {
+            "mean": 3.857488499999939,
+            "median": 3.727691500000219,
+            "min": 2.5505469999989145,
+            "max": 5.488880000004428,
+            "stddev": 0.9570850693483486,
+            "samples": 30,
+            "confidence95": {
+              "lower": 3.500107457828161,
+              "upper": 4.214869542171717,
+              "method": "two-sided Student t interval; df=29; Cornish-Fisher t critical approximation"
+            },
+            "medianConfidence95": {
+              "lower": 3.277597499996773,
+              "upper": 4.432318999999552,
+              "method": "percentile bootstrap of median; 2000 resamples; deterministic LCG seed from observations"
+            }
+          },
+          "exactThresholdStats": {
+            "mean": 1.8924173000004278,
+            "median": 1.348243000004004,
+            "min": 1.2467459999970743,
+            "max": 3.5331069999956526,
+            "stddev": 0.8287787045475398,
+            "samples": 30,
+            "confidence95": {
+              "lower": 1.5829465887264107,
+              "upper": 2.201888011274445,
+              "method": "two-sided Student t interval; df=29; Cornish-Fisher t critical approximation"
+            },
+            "medianConfidence95": {
+              "lower": 1.321271999997407,
+              "upper": 1.9789720000044326,
+              "method": "percentile bootstrap of median; 2000 resamples; deterministic LCG seed from observations"
+            }
+          },
+          "aboveThresholdStats": {
+            "mean": 2.369388100001379,
+            "median": 2.1304630000049656,
+            "min": 1.471903999998176,
+            "max": 4.20078499999363,
+            "stddev": 0.922916993241821,
+            "samples": 30,
+            "confidence95": {
+              "lower": 2.024765612987368,
+              "upper": 2.71401058701539,
+              "method": "two-sided Student t interval; df=29; Cornish-Fisher t critical approximation"
+            },
+            "medianConfidence95": {
+              "lower": 1.5484565000006114,
+              "upper": 2.698390500001551,
+              "method": "percentile bootstrap of median; 2000 resamples; deterministic LCG seed from observations"
+            }
+          },
+          "insufficientStats": {
+            "mean": 1.7633622666670514,
+            "median": 1.485353000000032,
+            "min": 0.9978580000024522,
+            "max": 3.293026999999711,
+            "stddev": 0.7619782678964879,
+            "samples": 30,
+            "confidence95": {
+              "lower": 1.4788352207290083,
+              "upper": 2.0478893126050943,
+              "method": "two-sided Student t interval; df=29; Cornish-Fisher t critical approximation"
+            },
+            "medianConfidence95": {
+              "lower": 1.0721520000006421,
+              "upper": 2.1893610000006447,
+              "method": "percentile bootstrap of median; 2000 resamples; deterministic LCG seed from observations"
+            }
+          },
+          "exactThresholdSuccess": {
+            "successes": 30,
+            "trials": 30,
+            "proportion": 1,
+            "confidence95": {
+              "lower": 0.886486605238548,
+              "upper": 1,
+              "method": "Wilson score interval"
+            }
+          },
+          "aboveThresholdSuccess": {
+            "successes": 30,
+            "trials": 30,
+            "proportion": 1,
+            "confidence95": {
+              "lower": 0.886486605238548,
+              "upper": 1,
+              "method": "Wilson score interval"
+            }
+          },
+          "insufficientShareFailure": {
+            "successes": 30,
+            "trials": 30,
+            "proportion": 1,
+            "confidence95": {
+              "lower": 0.886486605238548,
+              "upper": 1,
+              "method": "Wilson score interval"
+            }
+          }
+        }
+      ]
+    },
+    "tamper": {
+      "tests": [
+        {
+          "test": "ciphertext-mutated",
+          "mutation": "ciphertext-mutated",
+          "expectedResult": "decryption failure",
+          "actualResult": "decryption failed in every trial",
+          "pass": true,
+          "samples": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "successes": 30,
+          "trials": 30,
+          "proportion": 1,
+          "confidence95": {
+            "lower": 0.886486605238548,
+            "upper": 1,
+            "method": "Wilson score interval"
+          }
+        },
+        {
+          "test": "nonce-mutated",
+          "mutation": "nonce-mutated",
+          "expectedResult": "decryption failure",
+          "actualResult": "decryption failed in every trial",
+          "pass": true,
+          "samples": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "successes": 30,
+          "trials": 30,
+          "proportion": 1,
+          "confidence95": {
+            "lower": 0.886486605238548,
+            "upper": 1,
+            "method": "Wilson score interval"
+          }
+        },
+        {
+          "test": "wrapping-key-mutated",
+          "mutation": "wrapping-key-mutated",
+          "expectedResult": "decryption failure",
+          "actualResult": "decryption failed in every trial",
+          "pass": true,
+          "samples": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+          ],
+          "successes": 30,
+          "trials": 30,
+          "proportion": 1,
+          "confidence95": {
+            "lower": 0.886486605238548,
+            "upper": 1,
+            "method": "Wilson score interval"
+          }
+        }
+      ]
+    },
+    "offline": {
+      "attempts": 10,
+      "timingsMs": [
+        40.46429299999727,
+        40.02989600000001,
+        41.100046999999904,
+        39.446014000001014,
+        41.52227799999673,
+        43.545169000004535,
+        41.376313000000664,
+        40.389211000001524,
+        41.863610000000335,
+        40.992459999994026
+      ],
+      "stats": {
+        "mean": 41.0729290999996,
+        "median": 41.046253499996965,
+        "min": 39.446014000001014,
+        "max": 43.545169000004535,
+        "stddev": 1.135830211434017,
+        "samples": 10,
+        "confidence95": {
+          "lower": 40.26049700544767,
+          "upper": 41.88536119455153,
+          "method": "two-sided Student t interval; df=9; Cornish-Fisher t critical approximation"
+        },
+        "medianConfidence95": {
+          "lower": 40.24709449999864,
+          "upper": 41.52227799999673,
+          "method": "percentile bootstrap of median; 2000 resamples; deterministic LCG seed from observations"
+        }
+      },
+      "attemptsPerSecond": 10
+    },
+    "vault": {
+      "results": [
+        {
+          "entryCount": 10,
+          "samples": [
+            {
+              "repetition": 1,
+              "encryptionTimeMs": 0.12396100000478327,
+              "decryptionTimeMs": 0.26416099999914877
+            },
+            {
+              "repetition": 2,
+              "encryptionTimeMs": 0.1829589999979362,
+              "decryptionTimeMs": 0.1322760000039125
+            },
+            {
+              "repetition": 3,
+              "encryptionTimeMs": 0.11435100000380771,
+              "decryptionTimeMs": 0.15646399999968708
+            },
+            {
+              "repetition": 4,
+              "encryptionTimeMs": 0.11239700000442099,
+              "decryptionTimeMs": 0.14568400000280235
+            },
+            {
+              "repetition": 5,
+              "encryptionTimeMs": 0.07686600000306498,
+              "decryptionTimeMs": 0.18617700000322657
+            },
+            {
+              "repetition": 6,
+              "encryptionTimeMs": 0.08029600000008941,
+              "decryptionTimeMs": 0.15955699999904027
+            },
+            {
+              "repetition": 7,
+              "encryptionTimeMs": 0.08065000000351574,
+              "decryptionTimeMs": 0.19226200000412064
+            },
+            {
+              "repetition": 8,
+              "encryptionTimeMs": 0.10143299999617739,
+              "decryptionTimeMs": 0.07324099999823375
+            },
+            {
+              "repetition": 9,
+              "encryptionTimeMs": 0.06247100000473438,
+              "decryptionTimeMs": 0.10286099999939324
+            },
+            {
+              "repetition": 10,
+              "encryptionTimeMs": 0.05866300000343472,
+              "decryptionTimeMs": 0.058352000000013504
+            },
+            {
+              "repetition": 11,
+              "encryptionTimeMs": 0.05535599999711849,
+              "decryptionTimeMs": 0.10058399999979883
+            },
+            {
+              "repetition": 12,
+              "encryptionTimeMs": 0.05727800000022398,
+              "decryptionTimeMs": 0.05384100000082981
+            },
+            {
+              "repetition": 13,
+              "encryptionTimeMs": 0.052781999998842366,
+              "decryptionTimeMs": 0.05863600000157021
+            },
+            {
+              "repetition": 14,
+              "encryptionTimeMs": 0.06869200000073761,
+              "decryptionTimeMs": 0.05986299999494804
+            },
+            {
+              "repetition": 15,
+              "encryptionTimeMs": 0.0581739999979618,
+              "decryptionTimeMs": 0.10597200000484008
+            },
+            {
+              "repetition": 16,
+              "encryptionTimeMs": 0.052605000004405156,
+              "decryptionTimeMs": 0.053486000004340895
+            },
+            {
+              "repetition": 17,
+              "encryptionTimeMs": 0.07570900000428082,
+              "decryptionTimeMs": 0.10825299999851268
+            },
+            {
+              "repetition": 18,
+              "encryptionTimeMs": 0.05380100000184029,
+              "decryptionTimeMs": 0.05693199999950593
+            },
+            {
+              "repetition": 19,
+              "encryptionTimeMs": 0.05340499999874737,
+              "decryptionTimeMs": 0.10114099999918835
+            },
+            {
+              "repetition": 20,
+              "encryptionTimeMs": 0.05600799999956507,
+              "decryptionTimeMs": 0.04890200000227196
+            },
+            {
+              "repetition": 21,
+              "encryptionTimeMs": 0.06445700000040233,
+              "decryptionTimeMs": 0.3371880000049714
+            },
+            {
+              "repetition": 22,
+              "encryptionTimeMs": 0.07627399999910267,
+              "decryptionTimeMs": 0.06004199999733828
+            },
+            {
+              "repetition": 23,
+              "encryptionTimeMs": 0.06599599999753991,
+              "decryptionTimeMs": 0.07419400000071619
+            },
+            {
+              "repetition": 24,
+              "encryptionTimeMs": 0.05022199999802979,
+              "decryptionTimeMs": 0.049317999997583684
+            },
+            {
+              "repetition": 25,
+              "encryptionTimeMs": 0.047416000001248904,
+              "decryptionTimeMs": 0.09118600000510924
+            },
+            {
+              "repetition": 26,
+              "encryptionTimeMs": 0.04770499999722233,
+              "decryptionTimeMs": 0.04947600000014063
+            },
+            {
+              "repetition": 27,
+              "encryptionTimeMs": 0.05401400000118883,
+              "decryptionTimeMs": 0.09156000000075437
+            },
+            {
+              "repetition": 28,
+              "encryptionTimeMs": 0.04843799999798648,
+              "decryptionTimeMs": 0.049827999995613936
+            },
+            {
+              "repetition": 29,
+              "encryptionTimeMs": 0.0630650000020978,
+              "decryptionTimeMs": 0.10497899999609217
+            },
+            {
+              "repetition": 30,
+              "encryptionTimeMs": 0.05508700000063982,
+              "decryptionTimeMs": 0.0526769999996759
+            }
+          ],
+          "encryptionStats": {
+            "mean": 0.07168436666737156,
+            "median": 0.06056700000408455,
+            "min": 0.047416000001248904,
+            "max": 0.1829589999979362,
+            "stddev": 0.02944848363966444,
+            "samples": 30,
+            "confidence95": {
+              "lower": 0.06068813434636427,
+              "upper": 0.08268059898837886,
+              "method": "two-sided Student t interval; df=29; Cornish-Fisher t critical approximation"
+            },
+            "medianConfidence95": {
+              "lower": 0.05522149999887915,
+              "upper": 0.07220050000250922,
+              "method": "percentile bootstrap of median; 2000 resamples; deterministic LCG seed from observations"
+            }
+          },
+          "decryptionStats": {
+            "mean": 0.1059697666671127,
+            "median": 0.0913730000029318,
+            "min": 0.04890200000227196,
+            "max": 0.3371880000049714,
+            "stddev": 0.06820383826124687,
+            "samples": 30,
+            "confidence95": {
+              "lower": 0.08050206313840148,
+              "upper": 0.13143747019582394,
+              "method": "two-sided Student t interval; df=29; Cornish-Fisher t critical approximation"
+            },
+            "medianConfidence95": {
+              "lower": 0.059249499998259125,
+              "upper": 0.10547550000046613,
+              "method": "percentile bootstrap of median; 2000 resamples; deterministic LCG seed from observations"
+            }
+          },
+          "serializedVaultSizeBytes": 2494,
+          "openedEntryCount": 10
+        },
+        {
+          "entryCount": 50,
+          "samples": [
+            {
+              "repetition": 1,
+              "encryptionTimeMs": 0.22678399999858811,
+              "decryptionTimeMs": 0.21446900000591995
+            },
+            {
+              "repetition": 2,
+              "encryptionTimeMs": 0.2616570000027423,
+              "decryptionTimeMs": 0.3833970000050613
+            },
+            {
+              "repetition": 3,
+              "encryptionTimeMs": 0.37404899999819463,
+              "decryptionTimeMs": 0.3297060000040801
+            },
+            {
+              "repetition": 4,
+              "encryptionTimeMs": 0.28149300000222865,
+              "decryptionTimeMs": 0.1810710000063409
+            },
+            {
+              "repetition": 5,
+              "encryptionTimeMs": 0.1557699999975739,
+              "decryptionTimeMs": 0.14400400000158697
+            },
+            {
+              "repetition": 6,
+              "encryptionTimeMs": 0.12063299999863375,
+              "decryptionTimeMs": 0.14870199999859324
+            },
+            {
+              "repetition": 7,
+              "encryptionTimeMs": 0.13092999999935273,
+              "decryptionTimeMs": 0.1564650000000256
+            },
+            {
+              "repetition": 8,
+              "encryptionTimeMs": 0.11832900000445079,
+              "decryptionTimeMs": 0.14688800000294577
+            },
+            {
+              "repetition": 9,
+              "encryptionTimeMs": 0.2222509999992326,
+              "decryptionTimeMs": 0.1680640000049607
+            },
+            {
+              "repetition": 10,
+              "encryptionTimeMs": 0.12067000000388362,
+              "decryptionTimeMs": 0.1385260000024573
+            },
+            {
+              "repetition": 11,
+              "encryptionTimeMs": 0.11461299999791663,
+              "decryptionTimeMs": 0.34006000000226777
+            },
+            {
+              "repetition": 12,
+              "encryptionTimeMs": 0.16409199999907287,
+              "decryptionTimeMs": 0.1325379999980214
+            },
+            {
+              "repetition": 13,
+              "encryptionTimeMs": 0.11136599999736063,
+              "decryptionTimeMs": 0.12056599999777973
+            },
+            {
+              "repetition": 14,
+              "encryptionTimeMs": 0.11376500000187661,
+              "decryptionTimeMs": 0.1600380000018049
+            },
+            {
+              "repetition": 15,
+              "encryptionTimeMs": 0.10859699999855366,
+              "decryptionTimeMs": 0.12401300000055926
+            },
+            {
+              "repetition": 16,
+              "encryptionTimeMs": 0.10997100000531645,
+              "decryptionTimeMs": 0.15775500000017928
+            },
+            {
+              "repetition": 17,
+              "encryptionTimeMs": 0.11230699999578064,
+              "decryptionTimeMs": 0.1201980000041658
+            },
+            {
+              "repetition": 18,
+              "encryptionTimeMs": 0.11175300000468269,
+              "decryptionTimeMs": 0.12276800000108778
+            },
+            {
+              "repetition": 19,
+              "encryptionTimeMs": 0.13887200000317534,
+              "decryptionTimeMs": 0.12852199999906588
+            },
+            {
+              "repetition": 20,
+              "encryptionTimeMs": 0.11372899999696529,
+              "decryptionTimeMs": 0.39661599999817554
+            },
+            {
+              "repetition": 21,
+              "encryptionTimeMs": 0.16786200000206009,
+              "decryptionTimeMs": 0.17757900000287918
+            },
+            {
+              "repetition": 22,
+              "encryptionTimeMs": 0.134394999993674,
+              "decryptionTimeMs": 0.14587500000197906
+            },
+            {
+              "repetition": 23,
+              "encryptionTimeMs": 0.12900100000115344,
+              "decryptionTimeMs": 0.11144400000193855
+            },
+            {
+              "repetition": 24,
+              "encryptionTimeMs": 0.10269900000275811,
+              "decryptionTimeMs": 0.11867199999687728
+            },
+            {
+              "repetition": 25,
+              "encryptionTimeMs": 0.10453599999891594,
+              "decryptionTimeMs": 0.12797499999578577
+            },
+            {
+              "repetition": 26,
+              "encryptionTimeMs": 0.12732800000230782,
+              "decryptionTimeMs": 0.1358609999952023
+            },
+            {
+              "repetition": 27,
+              "encryptionTimeMs": 0.11670600000070408,
+              "decryptionTimeMs": 0.18672100000549108
+            },
+            {
+              "repetition": 28,
+              "encryptionTimeMs": 0.14863400000467664,
+              "decryptionTimeMs": 0.18554999999469146
+            },
+            {
+              "repetition": 29,
+              "encryptionTimeMs": 0.16240100000140956,
+              "decryptionTimeMs": 0.448208000001614
+            },
+            {
+              "repetition": 30,
+              "encryptionTimeMs": 0.15002500000264263,
+              "decryptionTimeMs": 0.16695199999958277
+            }
+          ],
+          "encryptionStats": {
+            "mean": 0.15184060000052949,
+            "median": 0.12816450000173063,
+            "min": 0.10269900000275811,
+            "max": 0.37404899999819463,
+            "stddev": 0.06244298316524977,
+            "samples": 30,
+            "confidence95": {
+              "lower": 0.12852403273331048,
+              "upper": 0.1751571672677485,
+              "method": "two-sided Student t interval; df=29; Cornish-Fisher t critical approximation"
+            },
+            "medianConfidence95": {
+              "lower": 0.11565949999931036,
+              "upper": 0.14932950000365963,
+              "method": "percentile bootstrap of median; 2000 resamples; deterministic LCG seed from observations"
+            }
+          },
+          "decryptionStats": {
+            "mean": 0.18730676666770402,
+            "median": 0.15258349999930942,
+            "min": 0.11144400000193855,
+            "max": 0.448208000001614,
+            "stddev": 0.09237897202239323,
+            "samples": 30,
+            "confidence95": {
+              "lower": 0.1528119298413402,
+              "upper": 0.22180160349406783,
+              "method": "two-sided Student t interval; df=29; Cornish-Fisher t critical approximation"
+            },
+            "medianConfidence95": {
+              "lower": 0.1371934999988298,
+              "upper": 0.17401150000296184,
+              "method": "percentile bootstrap of median; 2000 resamples; deterministic LCG seed from observations"
+            }
+          },
+          "serializedVaultSizeBytes": 10758,
+          "openedEntryCount": 50
+        },
+        {
+          "entryCount": 100,
+          "samples": [
+            {
+              "repetition": 1,
+              "encryptionTimeMs": 0.4950870000029681,
+              "decryptionTimeMs": 0.5545679999995627
+            },
+            {
+              "repetition": 2,
+              "encryptionTimeMs": 0.4251169999988633,
+              "decryptionTimeMs": 0.4300599999987753
+            },
+            {
+              "repetition": 3,
+              "encryptionTimeMs": 0.34639900000183843,
+              "decryptionTimeMs": 0.2306460000036168
+            },
+            {
+              "repetition": 4,
+              "encryptionTimeMs": 0.29763299999467563,
+              "decryptionTimeMs": 0.24955700000282377
+            },
+            {
+              "repetition": 5,
+              "encryptionTimeMs": 0.3088999999963562,
+              "decryptionTimeMs": 0.3016749999951571
+            },
+            {
+              "repetition": 6,
+              "encryptionTimeMs": 0.4347039999993285,
+              "decryptionTimeMs": 0.47780000000057044
+            },
+            {
+              "repetition": 7,
+              "encryptionTimeMs": 0.2509700000009616,
+              "decryptionTimeMs": 0.30882999999448657
+            },
+            {
+              "repetition": 8,
+              "encryptionTimeMs": 0.25237300000299,
+              "decryptionTimeMs": 0.2489320000022417
+            },
+            {
+              "repetition": 9,
+              "encryptionTimeMs": 0.2468940000035218,
+              "decryptionTimeMs": 0.23497599999973318
+            },
+            {
+              "repetition": 10,
+              "encryptionTimeMs": 0.3000450000035926,
+              "decryptionTimeMs": 0.36933200000203215
+            },
+            {
+              "repetition": 11,
+              "encryptionTimeMs": 0.4332480000011856,
+              "decryptionTimeMs": 0.6858940000020084
+            },
+            {
+              "repetition": 12,
+              "encryptionTimeMs": 0.33284000000276137,
+              "decryptionTimeMs": 0.3620210000008228
+            },
+            {
+              "repetition": 13,
+              "encryptionTimeMs": 0.23839599999337224,
+              "decryptionTimeMs": 0.3826710000066669
+            },
+            {
+              "repetition": 14,
+              "encryptionTimeMs": 0.3109249999979511,
+              "decryptionTimeMs": 0.2529389999981504
+            },
+            {
+              "repetition": 15,
+              "encryptionTimeMs": 0.23294000000169035,
+              "decryptionTimeMs": 0.2766330000013113
+            },
+            {
+              "repetition": 16,
+              "encryptionTimeMs": 0.32327100000111386,
+              "decryptionTimeMs": 0.3778440000023693
+            },
+            {
+              "repetition": 17,
+              "encryptionTimeMs": 0.2699750000028871,
+              "decryptionTimeMs": 0.2719290000022738
+            },
+            {
+              "repetition": 18,
+              "encryptionTimeMs": 0.21975099999690428,
+              "decryptionTimeMs": 0.17092499999853317
+            },
+            {
+              "repetition": 19,
+              "encryptionTimeMs": 0.24516199999925448,
+              "decryptionTimeMs": 0.18958999999449588
+            },
+            {
+              "repetition": 20,
+              "encryptionTimeMs": 0.2127519999994547,
+              "decryptionTimeMs": 0.1270589999985532
+            },
+            {
+              "repetition": 21,
+              "encryptionTimeMs": 0.2006660000042757,
+              "decryptionTimeMs": 0.33227400000032503
+            },
+            {
+              "repetition": 22,
+              "encryptionTimeMs": 0.2221480000007432,
+              "decryptionTimeMs": 0.1288940000013099
+            },
+            {
+              "repetition": 23,
+              "encryptionTimeMs": 0.21019800000067335,
+              "decryptionTimeMs": 0.15010400000028312
+            },
+            {
+              "repetition": 24,
+              "encryptionTimeMs": 0.1829920000018319,
+              "decryptionTimeMs": 0.11455900000146357
+            },
+            {
+              "repetition": 25,
+              "encryptionTimeMs": 0.19589499999710824,
+              "decryptionTimeMs": 0.14406400000007125
+            },
+            {
+              "repetition": 26,
+              "encryptionTimeMs": 0.22074699999939185,
+              "decryptionTimeMs": 0.28287799999816343
+            },
+            {
+              "repetition": 27,
+              "encryptionTimeMs": 0.20115700000314973,
+              "decryptionTimeMs": 0.16146500000468222
+            },
+            {
+              "repetition": 28,
+              "encryptionTimeMs": 0.23155399999814108,
+              "decryptionTimeMs": 0.12051799999608193
+            },
+            {
+              "repetition": 29,
+              "encryptionTimeMs": 0.18698800000129268,
+              "decryptionTimeMs": 0.14527300000190735
+            },
+            {
+              "repetition": 30,
+              "encryptionTimeMs": 0.21215899999515386,
+              "decryptionTimeMs": 0.12215599999763072
+            }
+          ],
+          "encryptionStats": {
+            "mean": 0.27472953333344774,
+            "median": 0.24602800000138814,
+            "min": 0.1829920000018319,
+            "max": 0.4950870000029681,
+            "stddev": 0.08261311351208955,
+            "samples": 30,
+            "confidence95": {
+              "lower": 0.2438813239636075,
+              "upper": 0.30557774270328797,
+              "method": "two-sided Student t interval; df=29; Cornish-Fisher t critical approximation"
+            },
+            "medianConfidence95": {
+              "lower": 0.22144750000006752,
+              "upper": 0.2988389999991341,
+              "method": "percentile bootstrap of median; 2000 resamples; deterministic LCG seed from observations"
+            }
+          },
+          "decryptionStats": {
+            "mean": 0.2735355333335368,
+            "median": 0.2512480000004871,
+            "min": 0.11455900000146357,
+            "max": 0.6858940000020084,
+            "stddev": 0.13872864070168622,
+            "samples": 30,
+            "confidence95": {
+              "lower": 0.2217334649690187,
+              "upper": 0.3253376016980549,
+              "method": "two-sided Student t interval; df=29; Cornish-Fisher t critical approximation"
+            },
+            "medianConfidence95": {
+              "lower": 0.18025749999651453,
+              "upper": 0.30882999999448657,
+              "method": "percentile bootstrap of median; 2000 resamples; deterministic LCG seed from observations"
+            }
+          },
+          "serializedVaultSizeBytes": 21098,
+          "openedEntryCount": 100
+        },
+        {
+          "entryCount": 500,
+          "samples": [
+            {
+              "repetition": 1,
+              "encryptionTimeMs": 2.2707070000033127,
+              "decryptionTimeMs": 12.027268000005279
+            },
+            {
+              "repetition": 2,
+              "encryptionTimeMs": 1.310870999994222,
+              "decryptionTimeMs": 0.9646229999998468
+            },
+            {
+              "repetition": 3,
+              "encryptionTimeMs": 2.355004999997618,
+              "decryptionTimeMs": 0.8026850000023842
+            },
+            {
+              "repetition": 4,
+              "encryptionTimeMs": 1.1320360000026994,
+              "decryptionTimeMs": 0.8046919999978854
+            },
+            {
+              "repetition": 5,
+              "encryptionTimeMs": 2.8347850000063772,
+              "decryptionTimeMs": 0.807544000002963
+            },
+            {
+              "repetition": 6,
+              "encryptionTimeMs": 1.13454400000046,
+              "decryptionTimeMs": 0.6942070000004605
+            },
+            {
+              "repetition": 7,
+              "encryptionTimeMs": 2.010229999999865,
+              "decryptionTimeMs": 0.5455929999952787
+            },
+            {
+              "repetition": 8,
+              "encryptionTimeMs": 1.1175039999943692,
+              "decryptionTimeMs": 0.9443539999992936
+            },
+            {
+              "repetition": 9,
+              "encryptionTimeMs": 2.3609440000000177,
+              "decryptionTimeMs": 0.8259010000037961
+            },
+            {
+              "repetition": 10,
+              "encryptionTimeMs": 1.0332320000015898,
+              "decryptionTimeMs": 0.6089019999999437
+            },
+            {
+              "repetition": 11,
+              "encryptionTimeMs": 2.646626000001561,
+              "decryptionTimeMs": 1.582762999998522
+            },
+            {
+              "repetition": 12,
+              "encryptionTimeMs": 3.227296999997634,
+              "decryptionTimeMs": 2.1731199999994715
+            },
+            {
+              "repetition": 13,
+              "encryptionTimeMs": 4.867700000002515,
+              "decryptionTimeMs": 1.6662369999976363
+            },
+            {
+              "repetition": 14,
+              "encryptionTimeMs": 2.021640999999363,
+              "decryptionTimeMs": 1.4971939999959432
+            },
+            {
+              "repetition": 15,
+              "encryptionTimeMs": 3.6917449999964447,
+              "decryptionTimeMs": 2.0898939999970025
+            },
+            {
+              "repetition": 16,
+              "encryptionTimeMs": 3.3922680000032415,
+              "decryptionTimeMs": 1.2040710000001127
+            },
+            {
+              "repetition": 17,
+              "encryptionTimeMs": 2.0064930000007735,
+              "decryptionTimeMs": 1.6377139999967767
+            },
+            {
+              "repetition": 18,
+              "encryptionTimeMs": 1.340396999999939,
+              "decryptionTimeMs": 0.8892510000005132
+            },
+            {
+              "repetition": 19,
+              "encryptionTimeMs": 1.0970839999936288,
+              "decryptionTimeMs": 0.8957200000004377
+            },
+            {
+              "repetition": 20,
+              "encryptionTimeMs": 1.2338119999985793,
+              "decryptionTimeMs": 0.9795860000012908
+            },
+            {
+              "repetition": 21,
+              "encryptionTimeMs": 1.3826909999988857,
+              "decryptionTimeMs": 1.0650129999994533
+            },
+            {
+              "repetition": 22,
+              "encryptionTimeMs": 1.6944230000008247,
+              "decryptionTimeMs": 0.7732360000009066
+            },
+            {
+              "repetition": 23,
+              "encryptionTimeMs": 1.0032199999986915,
+              "decryptionTimeMs": 0.9221330000000307
+            },
+            {
+              "repetition": 24,
+              "encryptionTimeMs": 1.5691079999960493,
+              "decryptionTimeMs": 1.3262130000002799
+            },
+            {
+              "repetition": 25,
+              "encryptionTimeMs": 1.7741749999986496,
+              "decryptionTimeMs": 1.2904110000017681
+            },
+            {
+              "repetition": 26,
+              "encryptionTimeMs": 1.5914599999960046,
+              "decryptionTimeMs": 1.1665300000022398
+            },
+            {
+              "repetition": 27,
+              "encryptionTimeMs": 1.2171149999994668,
+              "decryptionTimeMs": 0.8744550000046729
+            },
+            {
+              "repetition": 28,
+              "encryptionTimeMs": 1.1335800000015297,
+              "decryptionTimeMs": 0.7545680000039283
+            },
+            {
+              "repetition": 29,
+              "encryptionTimeMs": 1.0972360000014305,
+              "decryptionTimeMs": 0.7380510000002687
+            },
+            {
+              "repetition": 30,
+              "encryptionTimeMs": 1.0349939999941853,
+              "decryptionTimeMs": 0.6424380000025849
+            }
+          ],
+          "encryptionStats": {
+            "mean": 1.8860974333326643,
+            "median": 1.580283999996027,
+            "min": 1.0032199999986915,
+            "max": 4.867700000002515,
+            "stddev": 0.9486078300191189,
+            "samples": 30,
+            "confidence95": {
+              "lower": 1.5318818408405923,
+              "upper": 2.2403130258247366,
+              "method": "two-sided Student t interval; df=29; Cornish-Fisher t critical approximation"
+            },
+            "medianConfidence95": {
+              "lower": 1.225463499999023,
+              "upper": 2.015935499999614,
+              "method": "percentile bootstrap of median; 2000 resamples; deterministic LCG seed from observations"
+            }
+          },
+          "decryptionStats": {
+            "mean": 1.4398122333336991,
+            "median": 0.9332434999996622,
+            "min": 0.5455929999952787,
+            "max": 12.027268000005279,
+            "stddev": 2.0428060030909903,
+            "samples": 30,
+            "confidence95": {
+              "lower": 0.677016781058492,
+              "upper": 2.202607685608906,
+              "method": "two-sided Student t interval; df=29; Cornish-Fisher t critical approximation"
+            },
+            "medianConfidence95": {
+              "lower": 0.8167225000033795,
+              "upper": 1.1853005000011763,
+              "method": "percentile bootstrap of median; 2000 resamples; deterministic LCG seed from observations"
+            }
+          },
+          "serializedVaultSizeBytes": 105898,
+          "openedEntryCount": 500
+        },
+        {
+          "entryCount": 1000,
+          "samples": [
+            {
+              "repetition": 1,
+              "encryptionTimeMs": 1.9743919999964419,
+              "decryptionTimeMs": 1.2446920000002137
+            },
+            {
+              "repetition": 2,
+              "encryptionTimeMs": 2.3859879999945406,
+              "decryptionTimeMs": 2.1581999999980326
+            },
+            {
+              "repetition": 3,
+              "encryptionTimeMs": 1.9314200000007986,
+              "decryptionTimeMs": 1.186478999996325
+            },
+            {
+              "repetition": 4,
+              "encryptionTimeMs": 1.9325349999999162,
+              "decryptionTimeMs": 1.1533819999967818
+            },
+            {
+              "repetition": 5,
+              "encryptionTimeMs": 5.178547000003164,
+              "decryptionTimeMs": 1.390067000000272
+            },
+            {
+              "repetition": 6,
+              "encryptionTimeMs": 2.0532059999968624,
+              "decryptionTimeMs": 1.232176999998046
+            },
+            {
+              "repetition": 7,
+              "encryptionTimeMs": 2.088285999998334,
+              "decryptionTimeMs": 1.7557820000001811
+            },
+            {
+              "repetition": 8,
+              "encryptionTimeMs": 1.9983339999962482,
+              "decryptionTimeMs": 1.1723409999976866
+            },
+            {
+              "repetition": 9,
+              "encryptionTimeMs": 1.9058430000004591,
+              "decryptionTimeMs": 1.1632529999988037
+            },
+            {
+              "repetition": 10,
+              "encryptionTimeMs": 4.970267000004242,
+              "decryptionTimeMs": 1.3811180000047898
+            },
+            {
+              "repetition": 11,
+              "encryptionTimeMs": 1.9852580000006128,
+              "decryptionTimeMs": 1.173110000003362
+            },
+            {
+              "repetition": 12,
+              "encryptionTimeMs": 2.0149550000060117,
+              "decryptionTimeMs": 1.7043269999994664
+            },
+            {
+              "repetition": 13,
+              "encryptionTimeMs": 1.9429349999991246,
+              "decryptionTimeMs": 1.1547189999982947
+            },
+            {
+              "repetition": 14,
+              "encryptionTimeMs": 1.9012470000016037,
+              "decryptionTimeMs": 1.2955980000042473
+            },
+            {
+              "repetition": 15,
+              "encryptionTimeMs": 4.9112590000004275,
+              "decryptionTimeMs": 1.3540560000037658
+            },
+            {
+              "repetition": 16,
+              "encryptionTimeMs": 1.996885000000475,
+              "decryptionTimeMs": 1.28538199999457
+            },
+            {
+              "repetition": 17,
+              "encryptionTimeMs": 1.9000989999985904,
+              "decryptionTimeMs": 1.711671999997634
+            },
+            {
+              "repetition": 18,
+              "encryptionTimeMs": 1.9124860000010813,
+              "decryptionTimeMs": 1.215199999998731
+            },
+            {
+              "repetition": 19,
+              "encryptionTimeMs": 1.882369999999355,
+              "decryptionTimeMs": 1.2101959999999963
+            },
+            {
+              "repetition": 20,
+              "encryptionTimeMs": 4.902666000001773,
+              "decryptionTimeMs": 1.4647029999978258
+            },
+            {
+              "repetition": 21,
+              "encryptionTimeMs": 2.114315999999235,
+              "decryptionTimeMs": 1.4314309999972465
+            },
+            {
+              "repetition": 22,
+              "encryptionTimeMs": 2.01051500000176,
+              "decryptionTimeMs": 1.7569579999981215
+            },
+            {
+              "repetition": 23,
+              "encryptionTimeMs": 1.9419939999934286,
+              "decryptionTimeMs": 1.254677000004449
+            },
+            {
+              "repetition": 24,
+              "encryptionTimeMs": 1.8750120000040624,
+              "decryptionTimeMs": 1.1058630000043195
+            },
+            {
+              "repetition": 25,
+              "encryptionTimeMs": 4.936778999996022,
+              "decryptionTimeMs": 1.3704090000028373
+            },
+            {
+              "repetition": 26,
+              "encryptionTimeMs": 1.9200999999957276,
+              "decryptionTimeMs": 1.2644910000017262
+            },
+            {
+              "repetition": 27,
+              "encryptionTimeMs": 1.941143000003649,
+              "decryptionTimeMs": 1.7719419999993988
+            },
+            {
+              "repetition": 28,
+              "encryptionTimeMs": 2.1643499999991036,
+              "decryptionTimeMs": 1.4176950000037323
+            },
+            {
+              "repetition": 29,
+              "encryptionTimeMs": 1.999458999998751,
+              "decryptionTimeMs": 1.2329759999993257
+            },
+            {
+              "repetition": 30,
+              "encryptionTimeMs": 6.291205000001355,
+              "decryptionTimeMs": 1.5504519999958575
+            }
+          ],
+          "encryptionStats": {
+            "mean": 2.6321283666664383,
+            "median": 1.9976094999983616,
+            "min": 1.8750120000040624,
+            "max": 6.291205000001355,
+            "stddev": 1.328343792010561,
+            "samples": 30,
+            "confidence95": {
+              "lower": 2.1361171927857594,
+              "upper": 3.1281395405471173,
+              "method": "two-sided Student t interval; df=29; Cornish-Fisher t critical approximation"
+            },
+            "medianConfidence95": {
+              "lower": 1.9415684999985388,
+              "upper": 2.070745999997598,
+              "method": "percentile bootstrap of median; 2000 resamples; deterministic LCG seed from observations"
+            }
+          },
+          "decryptionStats": {
+            "mean": 1.3854449333332013,
+            "median": 1.2904899999994086,
+            "min": 1.1058630000043195,
+            "max": 2.1581999999980326,
+            "stddev": 0.24972377028563247,
+            "samples": 30,
+            "confidence95": {
+              "lower": 1.2921966483709144,
+              "upper": 1.4786932182954882,
+              "method": "two-sided Student t interval; df=29; Cornish-Fisher t critical approximation"
+            },
+            "medianConfidence95": {
+              "lower": 1.232576499998686,
+              "upper": 1.403881000002002,
+              "method": "percentile bootstrap of median; 2000 resamples; deterministic LCG seed from observations"
+            }
+          },
+          "serializedVaultSizeBytes": 211902,
+          "openedEntryCount": 1000
+        }
+      ]
+    },
+    "rotation": {
+      "originalUnlockValid": true,
+      "rotatedUnlockValid": true,
+      "oldPasswordDenied": true
+    }
+  }
+}
